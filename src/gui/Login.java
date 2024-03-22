@@ -1,9 +1,24 @@
 package gui;
 
+import java.util.ArrayList;
+
 public class Login extends javax.swing.JFrame {
+
+    private final ArrayList<javax.swing.JTextField> listFieldRegister = new ArrayList<>();
+    private final ArrayList<javax.swing.JTextField> listFieldLogin = new ArrayList<>();
 
     public Login() {
         initComponents();
+
+        // Add to arraylist
+        listFieldLogin.add(fieldLoginDNI);
+        listFieldLogin.add(fieldLoginPass);
+
+        listFieldRegister.add(fieldAddress);
+        listFieldRegister.add(fieldDNI);
+        listFieldRegister.add(fieldName);
+        listFieldRegister.add(fieldPass);
+        listFieldRegister.add(fieldPhone);
     }
 
     /**
