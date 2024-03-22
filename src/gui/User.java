@@ -1,8 +1,8 @@
 package gui;
 
-public class Billete extends javax.swing.JFrame {
+public class User extends javax.swing.JFrame {
 
-    public Billete() {
+    public User() {
         initComponents();
     }
 
@@ -15,25 +15,21 @@ public class Billete extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelBillete = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         panelTitle = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
         panelCrud = new javax.swing.JPanel();
-        lbNRO = new javax.swing.JLabel();
-        fieldNRO = new javax.swing.JTextField();
-        lbDate = new javax.swing.JLabel();
-        fieldDate = new javax.swing.JTextField();
-        lbTime = new javax.swing.JLabel();
-        fieldTime = new javax.swing.JTextField();
-        lbOrigin = new javax.swing.JLabel();
-        fieldOrigin = new javax.swing.JTextField();
-        lbDestination = new javax.swing.JLabel();
-        fieldDestination = new javax.swing.JTextField();
-        lbClient = new javax.swing.JLabel();
-        fieldClient = new javax.swing.JTextField();
-        lbCompany = new javax.swing.JLabel();
-        fieldCompany = new javax.swing.JTextField();
+        lbDNI = new javax.swing.JLabel();
+        fieldDNI = new javax.swing.JTextField();
+        lbName = new javax.swing.JLabel();
+        fieldName = new javax.swing.JTextField();
+        lbPass = new javax.swing.JLabel();
+        fieldPass = new javax.swing.JPasswordField();
+        lbPhone = new javax.swing.JLabel();
+        fieldPhone = new javax.swing.JTextField();
+        lbAddress = new javax.swing.JLabel();
+        fieldAddress = new javax.swing.JTextField();
         lbSearch = new javax.swing.JLabel();
         selectSearch = new javax.swing.JComboBox<>();
         btnCreate = new javax.swing.JButton();
@@ -47,13 +43,13 @@ public class Billete extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelBillete.setBackground(new java.awt.Color(255, 215, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 215, 0));
 
         panelTitle.setBackground(new java.awt.Color(247, 247, 247));
 
         lbTitle.setFont(new java.awt.Font("URW Gothic", 1, 48)); // NOI18N
         lbTitle.setForeground(new java.awt.Color(51, 51, 51));
-        lbTitle.setText("NPB - Billetes");
+        lbTitle.setText("NPB - Usuarios");
         lbTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnHome.setBackground(new java.awt.Color(255, 215, 0));
@@ -69,7 +65,7 @@ public class Billete extends javax.swing.JFrame {
             .addGroup(panelTitleLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(lbTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 318, Short.MAX_VALUE)
                 .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91))
         );
@@ -85,68 +81,50 @@ public class Billete extends javax.swing.JFrame {
 
         panelCrud.setBackground(new java.awt.Color(241, 244, 249));
 
-        lbNRO.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbNRO.setForeground(new java.awt.Color(30, 30, 30));
-        lbNRO.setText("NRO:");
+        lbDNI.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbDNI.setForeground(new java.awt.Color(30, 30, 30));
+        lbDNI.setText("DNI:");
 
-        fieldNRO.setBackground(new java.awt.Color(247, 247, 247));
-        fieldNRO.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldNRO.setForeground(new java.awt.Color(30, 30, 30));
-        fieldNRO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldDNI.setBackground(new java.awt.Color(247, 247, 247));
+        fieldDNI.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldDNI.setForeground(new java.awt.Color(30, 30, 30));
+        fieldDNI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbDate.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbDate.setForeground(new java.awt.Color(30, 30, 30));
-        lbDate.setText("Fecha:");
+        lbName.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbName.setForeground(new java.awt.Color(30, 30, 30));
+        lbName.setText("Nombre:");
 
-        fieldDate.setBackground(new java.awt.Color(247, 247, 247));
-        fieldDate.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldDate.setForeground(new java.awt.Color(30, 30, 30));
-        fieldDate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldName.setBackground(new java.awt.Color(247, 247, 247));
+        fieldName.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldName.setForeground(new java.awt.Color(30, 30, 30));
+        fieldName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbTime.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbTime.setForeground(new java.awt.Color(30, 30, 30));
-        lbTime.setText("Hora:");
+        lbPass.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbPass.setForeground(new java.awt.Color(30, 30, 30));
+        lbPass.setText("Password:");
 
-        fieldTime.setBackground(new java.awt.Color(247, 247, 247));
-        fieldTime.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldTime.setForeground(new java.awt.Color(30, 30, 30));
-        fieldTime.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldPass.setBackground(new java.awt.Color(247, 247, 247));
+        fieldPass.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldPass.setForeground(new java.awt.Color(30, 30, 30));
+        fieldPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbOrigin.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbOrigin.setForeground(new java.awt.Color(30, 30, 30));
-        lbOrigin.setText("Origen:");
+        lbPhone.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbPhone.setForeground(new java.awt.Color(30, 30, 30));
+        lbPhone.setText("Teléfono:");
 
-        fieldOrigin.setBackground(new java.awt.Color(247, 247, 247));
-        fieldOrigin.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldOrigin.setForeground(new java.awt.Color(30, 30, 30));
-        fieldOrigin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldPhone.setBackground(new java.awt.Color(247, 247, 247));
+        fieldPhone.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldPhone.setForeground(new java.awt.Color(30, 30, 30));
+        fieldPhone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        lbDestination.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbDestination.setForeground(new java.awt.Color(30, 30, 30));
-        lbDestination.setText("Destino:");
+        lbAddress.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbAddress.setForeground(new java.awt.Color(30, 30, 30));
+        lbAddress.setText("Dirección:");
 
-        fieldDestination.setBackground(new java.awt.Color(247, 247, 247));
-        fieldDestination.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldDestination.setForeground(new java.awt.Color(30, 30, 30));
-        fieldDestination.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        lbClient.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbClient.setForeground(new java.awt.Color(30, 30, 30));
-        lbClient.setText("Cliente:");
-
-        fieldClient.setBackground(new java.awt.Color(247, 247, 247));
-        fieldClient.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldClient.setForeground(new java.awt.Color(30, 30, 30));
-        fieldClient.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        lbCompany.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbCompany.setForeground(new java.awt.Color(30, 30, 30));
-        lbCompany.setText("Compañía:");
-
-        fieldCompany.setBackground(new java.awt.Color(247, 247, 247));
-        fieldCompany.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldCompany.setForeground(new java.awt.Color(30, 30, 30));
-        fieldCompany.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldAddress.setBackground(new java.awt.Color(247, 247, 247));
+        fieldAddress.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldAddress.setForeground(new java.awt.Color(30, 30, 30));
+        fieldAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lbSearch.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbSearch.setForeground(new java.awt.Color(30, 30, 30));
@@ -205,80 +183,65 @@ public class Billete extends javax.swing.JFrame {
                     .addGroup(panelCrudLayout.createSequentialGroup()
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbClient)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                                .addComponent(fieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbNRO)
+                                .addComponent(lbDNI)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbTime)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbDate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(fieldDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelCrudLayout.createSequentialGroup()
+                                .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbName)
+                                    .addComponent(lbPass))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelCrudLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(fieldPass))))
                         .addGap(132, 132, 132)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbOrigin)
-                            .addComponent(lbDestination)
-                            .addComponent(lbCompany)
+                            .addComponent(lbPhone)
+                            .addComponent(lbAddress)
                             .addComponent(lbSearch))
                         .addGap(59, 59, 59)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(fieldDestination, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldCompany, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldOrigin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fieldAddress, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fieldPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(selectSearch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         panelCrudLayout.setVerticalGroup(
             panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelCrudLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(28, 28, 28)
                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCrudLayout.createSequentialGroup()
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbNRO)
-                            .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbOrigin))
+                            .addComponent(lbDNI)
+                            .addComponent(fieldDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbPhone))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lbDate)
-                            .addComponent(fieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbDestination))
+                            .addComponent(lbName)
+                            .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbAddress))
                         .addGap(12, 12, 12)
-                        .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbCompany)
-                                .addGap(12, 12, 12)
-                                .addComponent(lbSearch))
-                            .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(fieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbTime))
-                                .addGap(13, 13, 13)
-                                .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(fieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbClient)))))
+                        .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(fieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbPass)
+                            .addComponent(lbSearch)))
                     .addGroup(panelCrudLayout.createSequentialGroup()
-                        .addComponent(fieldOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(fieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(fieldAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(fieldCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(selectSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCreate, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnClean, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(15, 15, 15))
+                .addGap(28, 28, 28))
         );
 
         panelTable.setBackground(new java.awt.Color(251, 238, 241));
@@ -287,30 +250,30 @@ public class Billete extends javax.swing.JFrame {
         table.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "NRO", "Cliente", "Fecha", "Hora", "Origen", "Destino", "Compañía"
+                "DNI", "Nombre", "Password", "Teléfono", "Dirección"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -330,27 +293,27 @@ public class Billete extends javax.swing.JFrame {
             .addGroup(panelTableLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(subpanelTable, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         panelTableLayout.setVerticalGroup(
             panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTableLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(subpanelTable, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout panelBilleteLayout = new javax.swing.GroupLayout(panelBillete);
-        panelBillete.setLayout(panelBilleteLayout);
-        panelBilleteLayout.setHorizontalGroup(
-            panelBilleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panelCrud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        panelBilleteLayout.setVerticalGroup(
-            panelBilleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBilleteLayout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(panelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelCrud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -362,11 +325,11 @@ public class Billete extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBillete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBillete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -380,23 +343,19 @@ public class Billete extends javax.swing.JFrame {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JTextField fieldClient;
-    private javax.swing.JTextField fieldCompany;
-    private javax.swing.JTextField fieldDate;
-    private javax.swing.JTextField fieldDestination;
-    private javax.swing.JTextField fieldNRO;
-    private javax.swing.JTextField fieldOrigin;
-    private javax.swing.JTextField fieldTime;
-    private javax.swing.JLabel lbClient;
-    private javax.swing.JLabel lbCompany;
-    private javax.swing.JLabel lbDate;
-    private javax.swing.JLabel lbDestination;
-    private javax.swing.JLabel lbNRO;
-    private javax.swing.JLabel lbOrigin;
+    private javax.swing.JTextField fieldAddress;
+    private javax.swing.JTextField fieldDNI;
+    private javax.swing.JTextField fieldName;
+    private javax.swing.JPasswordField fieldPass;
+    private javax.swing.JTextField fieldPhone;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbAddress;
+    private javax.swing.JLabel lbDNI;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JLabel lbPass;
+    private javax.swing.JLabel lbPhone;
     private javax.swing.JLabel lbSearch;
-    private javax.swing.JLabel lbTime;
     private javax.swing.JLabel lbTitle;
-    private javax.swing.JPanel panelBillete;
     private javax.swing.JPanel panelCrud;
     private javax.swing.JPanel panelTable;
     private javax.swing.JPanel panelTitle;
