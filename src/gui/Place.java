@@ -1,8 +1,8 @@
 package gui;
 
-public class Places extends javax.swing.JFrame {
+public class Place extends javax.swing.JFrame {
 
-    public Places() {
+    public Place() {
         initComponents();
     }
 
