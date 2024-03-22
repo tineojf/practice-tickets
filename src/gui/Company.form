@@ -149,9 +149,9 @@
                                       <Component id="fieldCompany" min="-2" pref="230" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lbNRO" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbID" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="fieldNRO" min="-2" pref="230" max="-2" attributes="0"/>
+                                      <Component id="fieldID" min="-2" pref="230" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
@@ -187,8 +187,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbNRO" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldNRO" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldID" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="selectSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -211,7 +211,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbNRO">
+            <Component class="javax.swing.JLabel" name="lbID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="URW Gothic" size="18" style="1"/>
@@ -222,7 +222,7 @@
                 <Property name="text" type="java.lang.String" value="ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="fieldNRO">
+            <Component class="javax.swing.JTextField" name="fieldID">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f7" green="f7" red="f7" type="rgb"/>

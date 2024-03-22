@@ -1,8 +1,8 @@
 package gui;
 
-public class Place extends javax.swing.JFrame {
+public class Places extends javax.swing.JFrame {
 
-    public Place() {
+    public Places() {
         initComponents();
     }
 
@@ -15,13 +15,13 @@ public class Place extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelPlace = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         panelTitle = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
         panelCrud = new javax.swing.JPanel();
-        lbNRO = new javax.swing.JLabel();
-        fieldNRO = new javax.swing.JTextField();
+        lbID = new javax.swing.JLabel();
+        fieldID = new javax.swing.JTextField();
         lbPlace = new javax.swing.JLabel();
         fieldPlace = new javax.swing.JTextField();
         lbSearch = new javax.swing.JLabel();
@@ -31,13 +31,13 @@ public class Place extends javax.swing.JFrame {
         btnDelete = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
-        panelTable2 = new javax.swing.JPanel();
-        subpanelTable2 = new javax.swing.JScrollPane();
-        table2 = new javax.swing.JTable();
+        panelTable = new javax.swing.JPanel();
+        subpanelTable = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelPlace.setBackground(new java.awt.Color(255, 215, 0));
+        jPanel1.setBackground(new java.awt.Color(255, 215, 0));
 
         panelTitle.setBackground(new java.awt.Color(247, 247, 247));
 
@@ -59,7 +59,7 @@ public class Place extends javax.swing.JFrame {
             .addGroup(panelTitleLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(lbTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329, Short.MAX_VALUE)
                 .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91))
         );
@@ -75,14 +75,14 @@ public class Place extends javax.swing.JFrame {
 
         panelCrud.setBackground(new java.awt.Color(241, 244, 249));
 
-        lbNRO.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbNRO.setForeground(new java.awt.Color(30, 30, 30));
-        lbNRO.setText("NRO:");
+        lbID.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbID.setForeground(new java.awt.Color(30, 30, 30));
+        lbID.setText("ID:");
 
-        fieldNRO.setBackground(new java.awt.Color(247, 247, 247));
-        fieldNRO.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldNRO.setForeground(new java.awt.Color(30, 30, 30));
-        fieldNRO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldID.setBackground(new java.awt.Color(247, 247, 247));
+        fieldID.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldID.setForeground(new java.awt.Color(30, 30, 30));
+        fieldID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lbPlace.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbPlace.setForeground(new java.awt.Color(30, 30, 30));
@@ -143,9 +143,9 @@ public class Place extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(fieldPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbNRO)
+                                .addComponent(lbID)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(fieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(124, 124, 124)
                         .addComponent(lbSearch)
                         .addGap(34, 34, 34)
@@ -171,8 +171,8 @@ public class Place extends javax.swing.JFrame {
             .addGroup(panelCrudLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbNRO)
-                    .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbID)
+                    .addComponent(fieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbSearch)
                     .addComponent(selectSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -189,11 +189,11 @@ public class Place extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        panelTable2.setBackground(new java.awt.Color(251, 238, 241));
+        panelTable.setBackground(new java.awt.Color(251, 238, 241));
 
-        table2.setBackground(new java.awt.Color(255, 255, 255));
-        table2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        table2.setModel(new javax.swing.table.DefaultTableModel(
+        table.setBackground(new java.awt.Color(255, 255, 255));
+        table.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
                 {null, null},
@@ -211,7 +211,7 @@ public class Place extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "NRO", "Destino"
+                "ID", "Destino"
             }
         ) {
             Class[] types = new Class [] {
@@ -229,52 +229,52 @@ public class Place extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        subpanelTable2.setViewportView(table2);
+        subpanelTable.setViewportView(table);
 
-        javax.swing.GroupLayout panelTable2Layout = new javax.swing.GroupLayout(panelTable2);
-        panelTable2.setLayout(panelTable2Layout);
-        panelTable2Layout.setHorizontalGroup(
-            panelTable2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTable2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelTableLayout = new javax.swing.GroupLayout(panelTable);
+        panelTable.setLayout(panelTableLayout);
+        panelTableLayout.setHorizontalGroup(
+            panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTableLayout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(subpanelTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(subpanelTable, javax.swing.GroupLayout.PREFERRED_SIZE, 880, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
-        panelTable2Layout.setVerticalGroup(
-            panelTable2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelTable2Layout.createSequentialGroup()
+        panelTableLayout.setVerticalGroup(
+            panelTableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTableLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(subpanelTable2, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(subpanelTable, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(113, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout panelPlaceLayout = new javax.swing.GroupLayout(panelPlace);
-        panelPlace.setLayout(panelPlaceLayout);
-        panelPlaceLayout.setHorizontalGroup(
-            panelPlaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panelCrud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panelTable2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        panelPlaceLayout.setVerticalGroup(
-            panelPlaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPlaceLayout.createSequentialGroup()
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(panelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelCrud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelTable2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(panelTable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPlace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPlace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -288,24 +288,18 @@ public class Place extends javax.swing.JFrame {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JTextField fieldNRO;
+    private javax.swing.JTextField fieldID;
     private javax.swing.JTextField fieldPlace;
-    private javax.swing.JLabel lbNRO;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbID;
     private javax.swing.JLabel lbPlace;
     private javax.swing.JLabel lbSearch;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JPanel panelCrud;
-    private javax.swing.JPanel panelPlace;
     private javax.swing.JPanel panelTable;
-    private javax.swing.JPanel panelTable1;
-    private javax.swing.JPanel panelTable2;
     private javax.swing.JPanel panelTitle;
     private javax.swing.JComboBox<String> selectSearch;
     private javax.swing.JScrollPane subpanelTable;
-    private javax.swing.JScrollPane subpanelTable1;
-    private javax.swing.JScrollPane subpanelTable2;
     private javax.swing.JTable table;
-    private javax.swing.JTable table1;
-    private javax.swing.JTable table2;
     // End of variables declaration//GEN-END:variables
 }

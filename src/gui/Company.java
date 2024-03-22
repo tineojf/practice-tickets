@@ -1,18 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package gui;
 
-/**
- *
- * @author tineo
- */
 public class Company extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Company
-     */
     public Company() {
         initComponents();
     }
@@ -31,8 +20,8 @@ public class Company extends javax.swing.JFrame {
         lbTitle = new javax.swing.JLabel();
         btnHome = new javax.swing.JButton();
         panelCrud = new javax.swing.JPanel();
-        lbNRO = new javax.swing.JLabel();
-        fieldNRO = new javax.swing.JTextField();
+        lbID = new javax.swing.JLabel();
+        fieldID = new javax.swing.JTextField();
         lbCompany = new javax.swing.JLabel();
         fieldCompany = new javax.swing.JTextField();
         lbSearch = new javax.swing.JLabel();
@@ -89,14 +78,14 @@ public class Company extends javax.swing.JFrame {
 
         panelCrud.setBackground(new java.awt.Color(241, 244, 249));
 
-        lbNRO.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
-        lbNRO.setForeground(new java.awt.Color(30, 30, 30));
-        lbNRO.setText("ID:");
+        lbID.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbID.setForeground(new java.awt.Color(30, 30, 30));
+        lbID.setText("ID:");
 
-        fieldNRO.setBackground(new java.awt.Color(247, 247, 247));
-        fieldNRO.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldNRO.setForeground(new java.awt.Color(30, 30, 30));
-        fieldNRO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        fieldID.setBackground(new java.awt.Color(247, 247, 247));
+        fieldID.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldID.setForeground(new java.awt.Color(30, 30, 30));
+        fieldID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lbCompany.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbCompany.setForeground(new java.awt.Color(30, 30, 30));
@@ -157,9 +146,9 @@ public class Company extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(fieldCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelCrudLayout.createSequentialGroup()
-                                .addComponent(lbNRO)
+                                .addComponent(lbID)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(fieldID, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(124, 124, 124)
                         .addComponent(lbSearch)
                         .addGap(34, 34, 34)
@@ -185,8 +174,8 @@ public class Company extends javax.swing.JFrame {
             .addGroup(panelCrudLayout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbNRO)
-                    .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbID)
+                    .addComponent(fieldID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbSearch)
                     .addComponent(selectSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -294,40 +283,6 @@ public class Company extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Company.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Company.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Company.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Company.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Company().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClean;
@@ -337,10 +292,10 @@ public class Company extends javax.swing.JFrame {
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JTextField fieldCompany;
-    private javax.swing.JTextField fieldNRO;
+    private javax.swing.JTextField fieldID;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbCompany;
-    private javax.swing.JLabel lbNRO;
+    private javax.swing.JLabel lbID;
     private javax.swing.JLabel lbSearch;
     private javax.swing.JLabel lbTitle;
     private javax.swing.JPanel panelCrud;

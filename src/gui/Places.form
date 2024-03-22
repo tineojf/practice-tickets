@@ -23,17 +23,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelPlace" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelPlace" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="panelPlace">
+    <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="d7" red="ff" type="rgb"/>
@@ -45,7 +45,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="panelTitle" max="32767" attributes="0"/>
               <Component id="panelCrud" max="32767" attributes="0"/>
-              <Component id="panelTable2" alignment="0" max="32767" attributes="0"/>
+              <Component id="panelTable" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -55,7 +55,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="panelCrud" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="panelTable2" max="32767" attributes="0"/>
+                  <Component id="panelTable" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -74,7 +74,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                       <Component id="lbTitle" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="329" max="32767" attributes="0"/>
                       <Component id="btnHome" min="-2" pref="150" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                   </Group>
@@ -138,15 +138,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
                                       <Component id="lbPlace" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="fieldPlace" min="-2" pref="230" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="lbNRO" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="lbID" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="fieldNRO" min="-2" pref="230" max="-2" attributes="0"/>
+                                      <Component id="fieldID" min="-2" pref="230" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
@@ -155,7 +155,7 @@
                               <Component id="selectSearch" min="-2" pref="230" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="510" max="-2" attributes="0"/>
@@ -182,8 +182,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="lbNRO" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="fieldNRO" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbID" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fieldID" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="lbSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="selectSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -206,7 +206,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lbNRO">
+            <Component class="javax.swing.JLabel" name="lbID">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="URW Gothic" size="18" style="1"/>
@@ -214,10 +214,10 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="1e" green="1e" red="1e" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="NRO:"/>
+                <Property name="text" type="java.lang.String" value="ID:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="fieldNRO">
+            <Component class="javax.swing.JTextField" name="fieldID">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="f7" green="f7" red="f7" type="rgb"/>
@@ -367,7 +367,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="panelTable2">
+        <Container class="javax.swing.JPanel" name="panelTable">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f1" green="ee" red="fb" type="rgb"/>
@@ -379,7 +379,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Component id="subpanelTable2" min="-2" pref="880" max="-2" attributes="0"/>
+                      <Component id="subpanelTable" min="-2" pref="880" max="-2" attributes="0"/>
                       <EmptySpace pref="32" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -388,21 +388,21 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      <Component id="subpanelTable2" min="-2" pref="316" max="-2" attributes="0"/>
+                      <Component id="subpanelTable" min="-2" pref="316" max="-2" attributes="0"/>
                       <EmptySpace pref="113" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="subpanelTable2">
+            <Container class="javax.swing.JScrollPane" name="subpanelTable">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="table2">
+                <Component class="javax.swing.JTable" name="table">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -414,7 +414,7 @@
                     </Property>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="2" rowCount="14">
-                        <Column editable="false" title="NRO" type="java.lang.String"/>
+                        <Column editable="false" title="ID" type="java.lang.String"/>
                         <Column editable="false" title="Destino" type="java.lang.String"/>
                       </Table>
                     </Property>
