@@ -37,9 +37,9 @@ public class Login extends javax.swing.JFrame {
         lbAddress = new javax.swing.JLabel();
         fieldAddress = new javax.swing.JTextField();
         lbPass = new javax.swing.JLabel();
-        fieldPass = new javax.swing.JPasswordField();
         modalRegister = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
+        fieldPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,19 +74,19 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(btnLoginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRegisterTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         panelTitleLayout.setVerticalGroup(
             panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbTitle)
-                    .addGroup(panelTitleLayout.createSequentialGroup()
+                .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
                         .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnLoginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnRegisterTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10)))
+                        .addGap(10, 10, 10))
+                    .addComponent(lbTitle))
                 .addGap(28, 28, 28))
         );
 
@@ -197,11 +197,6 @@ public class Login extends javax.swing.JFrame {
         lbPass.setForeground(new java.awt.Color(30, 30, 30));
         lbPass.setText("Contraseña:");
 
-        fieldPass.setBackground(new java.awt.Color(247, 247, 247));
-        fieldPass.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldPass.setForeground(new java.awt.Color(30, 30, 30));
-        fieldPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         modalRegister.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         modalRegister.setForeground(new java.awt.Color(255, 0, 0));
         modalRegister.setText("Modal: Error iniciar sesión");
@@ -213,6 +208,11 @@ public class Login extends javax.swing.JFrame {
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
         btnRegister.setText("Registrar usuario");
         btnRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        fieldPass.setBackground(new java.awt.Color(247, 247, 247));
+        fieldPass.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldPass.setForeground(new java.awt.Color(30, 30, 30));
+        fieldPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout panelRegisterLayout = new javax.swing.GroupLayout(panelRegister);
         panelRegister.setLayout(panelRegisterLayout);
@@ -256,9 +256,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(fieldAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lbPass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(fieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(modalRegister)
                 .addGap(31, 31, 31)
                 .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
