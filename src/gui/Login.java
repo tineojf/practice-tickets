@@ -32,7 +32,25 @@ public class Login extends javax.swing.JFrame {
         btnLoginTitle = new javax.swing.JButton();
         btnRegisterTitle = new javax.swing.JButton();
         panelLogin = new javax.swing.JPanel();
+        lbLoginDNI = new javax.swing.JLabel();
+        fieldLoginDNI = new javax.swing.JTextField();
+        lbLoginPass = new javax.swing.JLabel();
+        fieldLoginPass = new javax.swing.JTextField();
+        modalLogin = new javax.swing.JLabel();
+        btnLogin = new javax.swing.JButton();
         panelRegister = new javax.swing.JPanel();
+        lbDNI = new javax.swing.JLabel();
+        fieldDNI = new javax.swing.JTextField();
+        lbName = new javax.swing.JLabel();
+        fieldName = new javax.swing.JTextField();
+        lbPhone = new javax.swing.JLabel();
+        fieldPhone = new javax.swing.JTextField();
+        lbAddress = new javax.swing.JLabel();
+        fieldAddress = new javax.swing.JTextField();
+        lbPass = new javax.swing.JLabel();
+        fieldPass = new javax.swing.JTextField();
+        modalRegister = new javax.swing.JLabel();
+        btnRegister = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,28 +103,177 @@ public class Login extends javax.swing.JFrame {
 
         panelLogin.setBackground(new java.awt.Color(232, 233, 243));
 
+        lbLoginDNI.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbLoginDNI.setForeground(new java.awt.Color(30, 30, 30));
+        lbLoginDNI.setText("DNI:");
+
+        fieldLoginDNI.setBackground(new java.awt.Color(247, 247, 247));
+        fieldLoginDNI.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldLoginDNI.setForeground(new java.awt.Color(30, 30, 30));
+        fieldLoginDNI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbLoginPass.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbLoginPass.setForeground(new java.awt.Color(30, 30, 30));
+        lbLoginPass.setText("Contraseña:");
+
+        fieldLoginPass.setBackground(new java.awt.Color(247, 247, 247));
+        fieldLoginPass.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldLoginPass.setForeground(new java.awt.Color(30, 30, 30));
+        fieldLoginPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        modalLogin.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        modalLogin.setForeground(new java.awt.Color(255, 0, 0));
+        modalLogin.setText("Modal: Error iniciar sesión");
+        modalLogin.setFocusable(false);
+        modalLogin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        btnLogin.setBackground(new java.awt.Color(60, 21, 24));
+        btnLogin.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("Iniciar Sesión");
+        btnLogin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
         panelLogin.setLayout(panelLoginLayout);
         panelLoginLayout.setHorizontalGroup(
             panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 468, Short.MAX_VALUE)
+            .addGroup(panelLoginLayout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbLoginDNI)
+                    .addComponent(lbLoginPass, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldLoginDNI, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(fieldLoginPass, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(modalLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         panelLoginLayout.setVerticalGroup(
             panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 508, Short.MAX_VALUE)
+            .addGroup(panelLoginLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(lbLoginDNI)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldLoginDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(lbLoginPass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fieldLoginPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(modalLogin)
+                .addGap(41, 41, 41)
+                .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         panelRegister.setBackground(new java.awt.Color(234, 236, 233));
+
+        lbDNI.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbDNI.setForeground(new java.awt.Color(30, 30, 30));
+        lbDNI.setText("DNI:");
+
+        fieldDNI.setBackground(new java.awt.Color(247, 247, 247));
+        fieldDNI.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldDNI.setForeground(new java.awt.Color(30, 30, 30));
+        fieldDNI.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbName.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbName.setForeground(new java.awt.Color(30, 30, 30));
+        lbName.setText("Nombre:");
+
+        fieldName.setBackground(new java.awt.Color(247, 247, 247));
+        fieldName.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldName.setForeground(new java.awt.Color(30, 30, 30));
+        fieldName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbPhone.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbPhone.setForeground(new java.awt.Color(30, 30, 30));
+        lbPhone.setText("Teléfono:");
+
+        fieldPhone.setBackground(new java.awt.Color(247, 247, 247));
+        fieldPhone.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldPhone.setForeground(new java.awt.Color(30, 30, 30));
+        fieldPhone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbAddress.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbAddress.setForeground(new java.awt.Color(30, 30, 30));
+        lbAddress.setText("Dirección:");
+
+        fieldAddress.setBackground(new java.awt.Color(247, 247, 247));
+        fieldAddress.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldAddress.setForeground(new java.awt.Color(30, 30, 30));
+        fieldAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        lbPass.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
+        lbPass.setForeground(new java.awt.Color(30, 30, 30));
+        lbPass.setText("Contraseña:");
+
+        fieldPass.setBackground(new java.awt.Color(247, 247, 247));
+        fieldPass.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
+        fieldPass.setForeground(new java.awt.Color(30, 30, 30));
+        fieldPass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        modalRegister.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        modalRegister.setForeground(new java.awt.Color(255, 0, 0));
+        modalRegister.setText("Modal: Error iniciar sesión");
+        modalRegister.setFocusable(false);
+        modalRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        btnRegister.setBackground(new java.awt.Color(115, 147, 126));
+        btnRegister.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegister.setText("Registrar usuario");
+        btnRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout panelRegisterLayout = new javax.swing.GroupLayout(panelRegister);
         panelRegister.setLayout(panelRegisterLayout);
         panelRegisterLayout.setHorizontalGroup(
             panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(panelRegisterLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbPass)
+                    .addComponent(fieldPass)
+                    .addComponent(lbAddress)
+                    .addComponent(fieldAddress)
+                    .addComponent(lbPhone)
+                    .addComponent(fieldPhone)
+                    .addComponent(lbName)
+                    .addComponent(fieldName)
+                    .addComponent(lbDNI)
+                    .addComponent(fieldDNI)
+                    .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(modalRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRegisterLayout.setVerticalGroup(
             panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(panelRegisterLayout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(lbDNI)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbPhone)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbAddress)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lbPass)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(fieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(modalRegister)
+                .addGap(31, 31, 31)
+                .addComponent(btnRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -179,10 +346,28 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnLoginTitle;
+    private javax.swing.JButton btnRegister;
     private javax.swing.JButton btnRegisterTitle;
+    private javax.swing.JTextField fieldAddress;
+    private javax.swing.JTextField fieldDNI;
+    private javax.swing.JTextField fieldLoginDNI;
+    private javax.swing.JTextField fieldLoginPass;
+    private javax.swing.JTextField fieldName;
+    private javax.swing.JTextField fieldPass;
+    private javax.swing.JTextField fieldPhone;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbAddress;
+    private javax.swing.JLabel lbDNI;
+    private javax.swing.JLabel lbLoginDNI;
+    private javax.swing.JLabel lbLoginPass;
+    private javax.swing.JLabel lbName;
+    private javax.swing.JLabel lbPass;
+    private javax.swing.JLabel lbPhone;
     private javax.swing.JLabel lbTitle;
+    private javax.swing.JLabel modalLogin;
+    private javax.swing.JLabel modalRegister;
     private javax.swing.JPanel panelLogin;
     private javax.swing.JPanel panelRegister;
     private javax.swing.JPanel panelTitle;
