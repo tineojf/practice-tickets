@@ -18,7 +18,7 @@ public class Billete extends javax.swing.JFrame {
         panelBillete = new javax.swing.JPanel();
         panelTitle = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
-        btnLogout = new javax.swing.JButton();
+        btnHome = new javax.swing.JButton();
         panelCrud = new javax.swing.JPanel();
         lbNRO = new javax.swing.JLabel();
         fieldNRO = new javax.swing.JTextField();
@@ -56,11 +56,11 @@ public class Billete extends javax.swing.JFrame {
         lbTitle.setText("NPB - Billetes");
         lbTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        btnLogout.setBackground(new java.awt.Color(255, 215, 0));
-        btnLogout.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(51, 51, 51));
-        btnLogout.setText("Logout");
-        btnLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHome.setBackground(new java.awt.Color(255, 215, 0));
+        btnHome.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
+        btnHome.setForeground(new java.awt.Color(51, 51, 51));
+        btnHome.setText("Home");
+        btnHome.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
@@ -70,7 +70,7 @@ public class Billete extends javax.swing.JFrame {
                 .addGap(62, 62, 62)
                 .addComponent(lbTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(91, 91, 91))
         );
         panelTitleLayout.setVerticalGroup(
@@ -79,7 +79,7 @@ public class Billete extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbTitle)
-                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13))
         );
 
@@ -378,7 +378,7 @@ public class Billete extends javax.swing.JFrame {
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnDelete;
-    private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnHome;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JTextField fieldCompany;

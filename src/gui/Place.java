@@ -16,20 +16,59 @@ public class Place extends javax.swing.JFrame {
     private void initComponents() {
 
         panelPlace = new javax.swing.JPanel();
+        panelTitle = new javax.swing.JPanel();
+        lbTitle = new javax.swing.JLabel();
+        btnHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panelPlace.setBackground(new java.awt.Color(255, 215, 0));
 
+        panelTitle.setBackground(new java.awt.Color(247, 247, 247));
+
+        lbTitle.setFont(new java.awt.Font("URW Gothic", 1, 48)); // NOI18N
+        lbTitle.setForeground(new java.awt.Color(51, 51, 51));
+        lbTitle.setText("NPB - Lugares");
+        lbTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        btnHome.setBackground(new java.awt.Color(255, 215, 0));
+        btnHome.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
+        btnHome.setForeground(new java.awt.Color(51, 51, 51));
+        btnHome.setText("Home");
+        btnHome.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
+        panelTitle.setLayout(panelTitleLayout);
+        panelTitleLayout.setHorizontalGroup(
+            panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTitleLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addComponent(lbTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 329, Short.MAX_VALUE)
+                .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91))
+        );
+        panelTitleLayout.setVerticalGroup(
+            panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbTitle)
+                    .addComponent(btnHome, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13))
+        );
+
         javax.swing.GroupLayout panelPlaceLayout = new javax.swing.GroupLayout(panelPlace);
         panelPlace.setLayout(panelPlaceLayout);
         panelPlaceLayout.setHorizontalGroup(
             panelPlaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 950, Short.MAX_VALUE)
+            .addComponent(panelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelPlaceLayout.setVerticalGroup(
             panelPlaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(panelPlaceLayout.createSequentialGroup()
+                .addComponent(panelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 702, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -48,6 +87,9 @@ public class Place extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHome;
+    private javax.swing.JLabel lbTitle;
     private javax.swing.JPanel panelPlace;
+    private javax.swing.JPanel panelTitle;
     // End of variables declaration//GEN-END:variables
 }
