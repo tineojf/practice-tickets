@@ -24,7 +24,7 @@ public class Login extends javax.swing.JFrame {
         lbLoginDNI = new javax.swing.JLabel();
         fieldLoginDNI = new javax.swing.JTextField();
         lbLoginPass = new javax.swing.JLabel();
-        fieldLoginPass = new javax.swing.JTextField();
+        fieldLoginPass = new javax.swing.JPasswordField();
         modalLogin = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
         panelRegister = new javax.swing.JPanel();
@@ -37,7 +37,7 @@ public class Login extends javax.swing.JFrame {
         lbAddress = new javax.swing.JLabel();
         fieldAddress = new javax.swing.JTextField();
         lbPass = new javax.swing.JLabel();
-        fieldPass = new javax.swing.JTextField();
+        fieldPass = new javax.swing.JPasswordField();
         modalRegister = new javax.swing.JLabel();
         btnRegister = new javax.swing.JButton();
 
@@ -132,9 +132,9 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(lbLoginDNI)
                     .addComponent(lbLoginPass, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fieldLoginDNI, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
-                    .addComponent(fieldLoginPass, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
                     .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modalLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(modalLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(fieldLoginPass))
                 .addContainerGap(156, Short.MAX_VALUE))
         );
         panelLoginLayout.setVerticalGroup(
@@ -146,9 +146,9 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(fieldLoginDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(lbLoginPass)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(fieldLoginPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
+                .addGap(28, 28, 28)
                 .addComponent(modalLogin)
                 .addGap(41, 41, 41)
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -222,7 +222,6 @@ public class Login extends javax.swing.JFrame {
                 .addGap(122, 122, 122)
                 .addGroup(panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbPass)
-                    .addComponent(fieldPass)
                     .addComponent(lbAddress)
                     .addComponent(fieldAddress)
                     .addComponent(lbPhone)
@@ -232,7 +231,8 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(lbDNI)
                     .addComponent(fieldDNI)
                     .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(modalRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(modalRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fieldPass))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRegisterLayout.setVerticalGroup(
@@ -308,9 +308,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField fieldAddress;
     private javax.swing.JTextField fieldDNI;
     private javax.swing.JTextField fieldLoginDNI;
-    private javax.swing.JTextField fieldLoginPass;
+    private javax.swing.JPasswordField fieldLoginPass;
     private javax.swing.JTextField fieldName;
-    private javax.swing.JTextField fieldPass;
+    private javax.swing.JPasswordField fieldPass;
     private javax.swing.JTextField fieldPhone;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbAddress;
