@@ -140,7 +140,7 @@ public class Operation extends javax.swing.JFrame {
 
         lbName.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbName.setForeground(new java.awt.Color(30, 30, 30));
-        lbName.setText("BIENVENIDO, ");
+        lbName.setText("BIENVENIDO, USUARIO REGISTRADO");
 
         javax.swing.GroupLayout panelOperationLayout = new javax.swing.GroupLayout(panelOperation);
         panelOperation.setLayout(panelOperationLayout);
