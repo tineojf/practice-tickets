@@ -1,7 +1,7 @@
 package gui;
 
 import java.util.ArrayList;
-import logic.Tools;
+import logic.tools.Tools;
 
 public class Company extends javax.swing.JFrame {
 

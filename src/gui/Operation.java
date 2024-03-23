@@ -1,6 +1,6 @@
 package gui;
 
-import logic.Tools;
+import logic.tools.Tools;
 
 public class Operation extends javax.swing.JFrame {
 

@@ -1,4 +1,4 @@
-package logic;
+package logic.tools;
 
 import gui.Login;
 import gui.Operation;
