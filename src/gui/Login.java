@@ -33,8 +33,6 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelTitle = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
-        btnLoginTitle = new javax.swing.JButton();
-        btnRegisterTitle = new javax.swing.JButton();
         panelLogin = new javax.swing.JPanel();
         lbLoginDNI = new javax.swing.JLabel();
         fieldLoginDNI = new javax.swing.JTextField();
@@ -67,17 +65,6 @@ public class Login extends javax.swing.JFrame {
         lbTitle.setText("NEW PERU BANK");
         lbTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        btnLoginTitle.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
-        btnLoginTitle.setForeground(new java.awt.Color(255, 255, 255));
-        btnLoginTitle.setText("Login");
-        btnLoginTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        btnRegisterTitle.setBackground(new java.awt.Color(255, 215, 0));
-        btnRegisterTitle.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
-        btnRegisterTitle.setForeground(new java.awt.Color(51, 51, 51));
-        btnRegisterTitle.setText("Registrar");
-        btnRegisterTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
         panelTitleLayout.setHorizontalGroup(
@@ -85,23 +72,13 @@ public class Login extends javax.swing.JFrame {
             .addGroup(panelTitleLayout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addComponent(lbTitle)
-                .addGap(178, 178, 178)
-                .addComponent(btnLoginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRegisterTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelTitleLayout.setVerticalGroup(
             panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
                 .addContainerGap(42, Short.MAX_VALUE)
-                .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
-                        .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnLoginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnRegisterTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10))
-                    .addComponent(lbTitle))
+                .addComponent(lbTitle)
                 .addGap(28, 28, 28))
         );
 
@@ -248,7 +225,7 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(modalRegister, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fieldPass))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         panelRegisterLayout.setVerticalGroup(
             panelRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,9 +294,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
-    private javax.swing.JButton btnLoginTitle;
     private javax.swing.JButton btnRegister;
-    private javax.swing.JButton btnRegisterTitle;
     private javax.swing.JTextField fieldAddress;
     private javax.swing.JTextField fieldDNI;
     private javax.swing.JTextField fieldLoginDNI;
