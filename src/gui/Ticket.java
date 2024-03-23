@@ -1,8 +1,8 @@
 package gui;
 
-public class Billete extends javax.swing.JFrame {
+public class Ticket extends javax.swing.JFrame {
 
-    public Billete() {
+    public Ticket() {
         initComponents();
     }
 
