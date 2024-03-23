@@ -1,9 +1,19 @@
 package gui;
 
+import java.util.ArrayList;
+import logic.Tools;
+
 public class User extends javax.swing.JFrame {
+
+    private final ArrayList<javax.swing.JTextField> listField = new ArrayList<>();
 
     public User() {
         initComponents();
+        listField.add(fieldAddress);
+        listField.add(fieldDNI);
+        listField.add(fieldName);
+        listField.add(fieldPass);
+        listField.add(fieldPhone);
     }
 
     /**
@@ -155,6 +165,11 @@ public class User extends javax.swing.JFrame {
         btnClean.setForeground(new java.awt.Color(51, 51, 51));
         btnClean.setText("Clean");
         btnClean.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnSearch.setBackground(new java.awt.Color(255, 215, 0));
         btnSearch.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -259,10 +274,6 @@ public class User extends javax.swing.JFrame {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
                 {null, null, null, null, null}
             },
             new String [] {
@@ -334,6 +345,11 @@ public class User extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        // TODO add your handling code here:
+        Tools.cleanField(listField);
+    }//GEN-LAST:event_btnCleanActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
