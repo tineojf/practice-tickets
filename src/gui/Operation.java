@@ -1,5 +1,7 @@
 package gui;
 
+import logic.Tools;
+
 public class Operation extends javax.swing.JFrame {
 
     public Operation() {
@@ -50,6 +52,11 @@ public class Operation extends javax.swing.JFrame {
         btnLogout.setForeground(new java.awt.Color(51, 51, 51));
         btnLogout.setText("Logout");
         btnLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnLogout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLogoutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
@@ -224,6 +231,11 @@ public class Operation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
+        // TODO add your handling code here:
+        Tools.goToLogin(this);
+    }//GEN-LAST:event_btnLogoutActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

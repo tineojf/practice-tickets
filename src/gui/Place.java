@@ -58,6 +58,11 @@ public class Place extends javax.swing.JFrame {
         btnHome.setForeground(new java.awt.Color(51, 51, 51));
         btnHome.setText("Home");
         btnHome.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHomeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
@@ -292,6 +297,11 @@ public class Place extends javax.swing.JFrame {
         // TODO add your handling code here:
         Tools.cleanField(listField);
     }//GEN-LAST:event_btnCleanActionPerformed
+
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        // TODO add your handling code here:
+        Tools.goToOperations(this);
+    }//GEN-LAST:event_btnHomeActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
