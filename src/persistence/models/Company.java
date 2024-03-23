@@ -1,15 +1,17 @@
-package logic.models;
+package persistence.models;
 
-public class Place {
+public class Company {
 
     private String id;
     private String name;
 
-    public Place(String id, String name) {
+    // Constructor
+    public Company(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
+    // Setters & getters
     public String getId() {
         return id;
     }

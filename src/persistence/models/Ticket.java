@@ -1,4 +1,4 @@
-package logic.models;
+package persistence.models;
 
 import java.time.LocalTime;
 import java.util.Date;

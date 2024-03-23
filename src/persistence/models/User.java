@@ -1,4 +1,4 @@
-package logic.models;
+package persistence.models;
 
 public class User {
 
