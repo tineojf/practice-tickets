@@ -1,9 +1,21 @@
 package gui;
 
+import java.util.ArrayList;
+import logic.Tools;
+
 public class Ticket extends javax.swing.JFrame {
+
+    private final ArrayList<javax.swing.JTextField> listField = new ArrayList<>();
 
     public Ticket() {
         initComponents();
+        listField.add(fieldClient);
+        listField.add(fieldCompany);
+        listField.add(fieldDate);
+        listField.add(fieldDestination);
+        listField.add(fieldNRO);
+        listField.add(fieldOrigin);
+        listField.add(fieldTime);
     }
 
     /**
@@ -177,6 +189,11 @@ public class Ticket extends javax.swing.JFrame {
         btnClean.setForeground(new java.awt.Color(51, 51, 51));
         btnClean.setText("Clean");
         btnClean.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnClean.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCleanActionPerformed(evt);
+            }
+        });
 
         btnSearch.setBackground(new java.awt.Color(255, 215, 0));
         btnSearch.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -371,6 +388,11 @@ public class Ticket extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
+        // TODO add your handling code here:
+        Tools.cleanField(listField);
+    }//GEN-LAST:event_btnCleanActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
