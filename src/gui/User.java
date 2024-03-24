@@ -192,6 +192,11 @@ public class User extends javax.swing.JFrame {
         btnSearch.setForeground(new java.awt.Color(51, 51, 51));
         btnSearch.setText("Search");
         btnSearch.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCrudLayout = new javax.swing.GroupLayout(panelCrud);
         panelCrud.setLayout(panelCrudLayout);
@@ -410,6 +415,19 @@ public class User extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        UserModel usuarioBuscado = UserDAO.getUserID(intID);
+
+        fieldDNI.setText(usuarioBuscado.getDni());
+        fieldAddress.setText(usuarioBuscado.getAddress());
+        fieldName.setText(usuarioBuscado.getName());
+        fieldPass.setText(usuarioBuscado.getPassword());
+        fieldPhone.setText(usuarioBuscado.getPhone());
+    }//GEN-LAST:event_btnSearchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
