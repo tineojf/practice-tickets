@@ -2,6 +2,9 @@ package gui;
 
 import java.util.ArrayList;
 import logic.tools.Tools;
+import javax.swing.JOptionPane;
+import persistence.dao.UserDAO;
+import persistence.models.UserModel;
 
 public class User extends javax.swing.JFrame {
 
@@ -152,6 +155,11 @@ public class User extends javax.swing.JFrame {
         btnCreate.setForeground(new java.awt.Color(51, 51, 51));
         btnCreate.setText("Create");
         btnCreate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setBackground(new java.awt.Color(255, 215, 0));
         btnUpdate.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -360,6 +368,36 @@ public class User extends javax.swing.JFrame {
         // TODO add your handling code here:
         Tools.goToOperations(this);
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldDNI.getText());
+            UserModel usuarioRegistrado = UserDAO.getUserID(id);
+
+            if (usuarioRegistrado == null) {
+                UserModel usuarioNuevo = new UserModel(
+                        fieldDNI.getText(),
+                        fieldPass.getText(),
+                        fieldName.getText(),
+                        fieldPhone.getText(),
+                        fieldAddress.getText());
+                //UserDAO.postUser(usuarioNuevo);
+                JOptionPane.showMessageDialog(null, "Usuario registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: DNI registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear el texto a entero: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnCreateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

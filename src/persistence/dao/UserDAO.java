@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import persistence.models.User;
+import persistence.models.UserModel;
 
 public class UserDAO {
 
@@ -14,15 +14,15 @@ public class UserDAO {
     private static final Connection connection = connector.getConnection();
 
     // Get - users
-    public static ArrayList<User> getUsers() {
-        ArrayList<User> userList = new ArrayList<>();
+    public static ArrayList<UserModel> getUsers() {
+        ArrayList<UserModel> userList = new ArrayList<>();
         String query = "SELECT * FROM CLIENTES";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
 
             while (result.next()) {
-                userList.add(new User(
+                userList.add(new UserModel(
                         String.valueOf(result.getInt("DNI")),
                         result.getString("NOMBRE"),
                         result.getString("PASSWORD"),
@@ -39,7 +39,7 @@ public class UserDAO {
     }
 
     // GET - User by id
-    public static User getUserID(int id) {
+    public static UserModel getUserID(int id) {
         String query = "SELECT * FROM CLIENTES WHERE DNI = "
                 + String.valueOf(id) + " FETCH FIRST 1 ROWS ONLY";
 
@@ -47,7 +47,7 @@ public class UserDAO {
             ResultSet result = connection.createStatement().executeQuery(query);
 
             if (result.next()) {
-                User usuario = new User(
+                UserModel usuario = new UserModel(
                         String.valueOf(result.getInt("DNI")),
                         result.getString("NOMBRE"),
                         result.getString("PASSWORD"),
@@ -65,7 +65,7 @@ public class UserDAO {
     }
 
     // POST - User
-    public static void postUser(User user) {
+    public static void postUser(UserModel user) {
         String query = "INSERT INTO CLIENTES "
                 + "(dni, nombre, password, telefono, direccion) "
                 + "VALUES (?, ?, ?, ?, ?)";
@@ -90,7 +90,7 @@ public class UserDAO {
 
     // DELETE - User
     public static void deleteUser(int id) {
-        User result = UserDAO.getUserID(id);
+        UserModel result = UserDAO.getUserID(id);
 
         if (result != null) {
             String query = "DELETE FROM CLIENTES WHERE dni = ?";
@@ -113,8 +113,8 @@ public class UserDAO {
     }
 
     // PUT - User
-    public static void updateUser(int id, User user) {
-        User result = UserDAO.getUserID(id);
+    public static void updateUser(int id, UserModel user) {
+        UserModel result = UserDAO.getUserID(id);
 
         if (result != null) {
             String query = "UPDATE CLIENTES SET nombre = ?, telefono = ?, direccion = ? WHERE dni = ?";
