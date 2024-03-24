@@ -38,6 +38,7 @@ public class UserDAO {
         }
     }
 
+    // GET - User by id
     public static User getUserID(int id) {
         String query = "SELECT * FROM CLIENTES WHERE DNI = "
                 + String.valueOf(id) + " FETCH FIRST 1 ROWS ONLY";
@@ -63,6 +64,7 @@ public class UserDAO {
         }
     }
 
+    // POST - User
     public static void postUser(User user) {
         String query = "INSERT INTO CLIENTES "
                 + "(dni, nombre, password, telefono, direccion) "
@@ -86,6 +88,7 @@ public class UserDAO {
         }
     }
 
+    // DELETE - User
     public static void deleteUser(int id) {
         User result = UserDAO.getUserID(id);
 
@@ -94,7 +97,6 @@ public class UserDAO {
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setInt(1, id);
-                System.out.println(query);
                 int rowsDeleted = preparedStatement.executeUpdate();
 
                 if (rowsDeleted > 0) {
@@ -104,6 +106,34 @@ public class UserDAO {
                 }
             } catch (SQLException e) {
                 System.err.println("DELETE error: " + e.getMessage());
+            }
+        } else {
+            System.out.println("El usuario con ID " + id + " no existe.");
+        }
+    }
+
+    // PUT - User
+    public static void updateUser(int id, User user) {
+        User result = UserDAO.getUserID(id);
+
+        if (result != null) {
+            String query = "UPDATE CLIENTES SET nombre = ?, telefono = ?, direccion = ? WHERE dni = ?";
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setString(1, user.getName());
+                preparedStatement.setString(2, user.getPhone());
+                preparedStatement.setString(3, user.getAddress());
+                preparedStatement.setInt(4, id);
+
+                int rowsUpdated = preparedStatement.executeUpdate();
+
+                if (rowsUpdated > 0) {
+                    System.out.println("¡Usuario actualizado correctamente!");
+                } else {
+                    System.out.println("Error al actualizar el usuario.");
+                }
+            } catch (SQLException e) {
+                System.err.println("UPDATE error: " + e.getMessage());
             }
         } else {
             System.out.println("El usuario con ID " + id + " no existe.");
