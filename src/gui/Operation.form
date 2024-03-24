@@ -136,15 +136,15 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="btnPlace" min="-2" pref="239" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="btnUser" alignment="1" min="-2" pref="239" max="-2" attributes="0"/>
-                                      <Component id="btnCompany" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnUser" min="-2" pref="239" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="btnCompany" max="32767" attributes="0"/>
+                                      <Component id="btnPlace" pref="239" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -214,6 +214,9 @@
                 <Property name="text" type="java.lang.String" value="Lugares"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlaceActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnCompany">
               <Properties>
@@ -229,6 +232,9 @@
                 <Property name="text" type="java.lang.String" value="Compa&#xf1;&#xed;as"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCompanyActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnUser">
               <Properties>
@@ -244,6 +250,9 @@
                 <Property name="text" type="java.lang.String" value="Usuarios"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUserActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnTicket">
               <Properties>
@@ -259,6 +268,9 @@
                 <Property name="text" type="java.lang.String" value="Billetes"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTicketActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane1">
               <AuxValues>

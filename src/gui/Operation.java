@@ -86,24 +86,44 @@ public class Operation extends javax.swing.JFrame {
         btnPlace.setForeground(new java.awt.Color(255, 255, 255));
         btnPlace.setText("Lugares");
         btnPlace.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPlace.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlaceActionPerformed(evt);
+            }
+        });
 
         btnCompany.setBackground(new java.awt.Color(111, 29, 27));
         btnCompany.setFont(new java.awt.Font("URW Gothic", 0, 36)); // NOI18N
         btnCompany.setForeground(new java.awt.Color(255, 255, 255));
         btnCompany.setText("Compañías");
         btnCompany.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCompany.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCompanyActionPerformed(evt);
+            }
+        });
 
         btnUser.setBackground(new java.awt.Color(111, 29, 27));
         btnUser.setFont(new java.awt.Font("URW Gothic", 0, 36)); // NOI18N
         btnUser.setForeground(new java.awt.Color(255, 255, 255));
         btnUser.setText("Usuarios");
         btnUser.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUserActionPerformed(evt);
+            }
+        });
 
         btnTicket.setBackground(new java.awt.Color(111, 29, 27));
         btnTicket.setFont(new java.awt.Font("URW Gothic", 0, 36)); // NOI18N
         btnTicket.setForeground(new java.awt.Color(255, 255, 255));
         btnTicket.setText("Billetes");
         btnTicket.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTicket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTicketActionPerformed(evt);
+            }
+        });
 
         txtPlace.setEditable(false);
         txtPlace.setBackground(new java.awt.Color(255, 255, 255));
@@ -156,14 +176,14 @@ public class Operation extends javax.swing.JFrame {
             .addGroup(panelOperationLayout.createSequentialGroup()
                 .addGroup(panelOperationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(panelOperationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(panelOperationLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(btnPlace, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelOperationLayout.createSequentialGroup()
                             .addGap(93, 93, 93)
-                            .addGroup(panelOperationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnUser, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnCompany))))
+                            .addComponent(btnUser, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelOperationLayout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(panelOperationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnCompany, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnPlace, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE))))
                     .addComponent(btnTicket, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(panelOperationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,6 +256,38 @@ public class Operation extends javax.swing.JFrame {
         // TODO add your handling code here:
         Tools.goToLogin(this);
     }//GEN-LAST:event_btnLogoutActionPerformed
+
+    private void btnTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTicketActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Ticket page = new Ticket();
+        page.setVisible(true);
+        page.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnTicketActionPerformed
+
+    private void btnPlaceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Place page = new Place();
+        page.setVisible(true);
+        page.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnPlaceActionPerformed
+
+    private void btnCompanyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompanyActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Company page = new Company();
+        page.setVisible(true);
+        page.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnCompanyActionPerformed
+
+    private void btnUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUserActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        User page = new User();
+        page.setVisible(true);
+        page.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnUserActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
