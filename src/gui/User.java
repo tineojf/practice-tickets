@@ -3,6 +3,7 @@ package gui;
 import java.util.ArrayList;
 import logic.tools.Tools;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import persistence.dao.UserDAO;
 import persistence.models.UserModel;
 
@@ -378,12 +379,27 @@ public class User extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loadData() {
+        // load id in Select Field
         ArrayList<String> listaID = UserDAO.getUsersOnlyID();
         selectSearch.removeAllItems();
 
         for (String item : listaID) {
             selectSearch.addItem(item);
         }
+
+        // load data in jtable
+        ArrayList<UserModel> listaUsers = UserDAO.getUsers();
+        DefaultTableModel tabla = new DefaultTableModel();
+        tabla.addColumn("DNI");
+        tabla.addColumn("Nombre");
+        tabla.addColumn("Teléfono");
+        tabla.addColumn("Dirección");
+
+        for (UserModel user : listaUsers) {
+            tabla.addRow(new Object[]{user.getDni(), user.getName(), user.getPhone(), user.getAddress()});
+        }
+        
+        this.table.setModel(tabla);
     }
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
