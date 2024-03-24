@@ -3,6 +3,7 @@ package persistence.dao;
 import persistence.ConnectorDB;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import persistence.models.User;
@@ -32,7 +33,7 @@ public class UserDAO {
 
             return userList;
         } catch (SQLException e) {
-            System.out.println("Select error: " + e.getMessage());
+            System.out.println("GET error: " + e.getMessage());
             return null;
         }
     }
@@ -56,8 +57,29 @@ public class UserDAO {
 
             return null;
         } catch (SQLException e) {
-            System.out.println("Select error: " + e.getMessage());
+            System.out.println("GET error: " + e.getMessage());
             return null;
+        }
+    }
+
+    public static void postUser(User user) {
+        String query = "INSERT INTO CLIENTES (dni, nombre, password, telefono, direccion) VALUES (?, ?, ?, ?, ?)";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, user.getDni());
+            preparedStatement.setString(2, user.getName());
+            preparedStatement.setString(3, user.getPassword());
+            preparedStatement.setString(4, user.getPhone());
+            preparedStatement.setString(5, user.getAddress());
+
+            int rowsInserted = preparedStatement.executeUpdate();
+            if (rowsInserted > 0) {
+                System.out.println("¡Usuario insertado correctamente!");
+            } else {
+                System.out.println("Error al insertar el usuario.");
+            }
+        } catch (SQLException e) {
+            System.err.println("POST error: " + e.getMessage());
         }
     }
 }
