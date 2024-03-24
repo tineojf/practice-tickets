@@ -1,11 +1,11 @@
 package persistence.models;
 
-public class Place {
+public class PlaceModel {
 
     private String id;
     private String name;
 
-    public Place(String id, String name) {
+    public PlaceModel(String id, String name) {
         this.id = id;
         this.name = name;
     }

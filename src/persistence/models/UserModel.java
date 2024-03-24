@@ -1,6 +1,6 @@
 package persistence.models;
 
-public class User {
+public class UserModel {
 
     private String dni;
     private String password;
@@ -8,7 +8,7 @@ public class User {
     private String phone;
     private String address;
 
-    public User(String dni, String password, String name, String phone, String address) {
+    public UserModel(String dni, String password, String name, String phone, String address) {
         this.dni = dni;
         this.password = password;
         this.name = name;

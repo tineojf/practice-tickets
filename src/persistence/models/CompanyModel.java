@@ -1,12 +1,12 @@
 package persistence.models;
 
-public class Company {
+public class CompanyModel {
 
     private String id;
     private String name;
 
     // Constructor
-    public Company(String id, String name) {
+    public CompanyModel(String id, String name) {
         this.id = id;
         this.name = name;
     }

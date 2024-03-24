@@ -3,7 +3,7 @@ package persistence.models;
 import java.time.LocalTime;
 import java.util.Date;
 
-public class Ticket {
+public class TicketModel {
 
     private String id;
     private String origin;
@@ -13,7 +13,7 @@ public class Ticket {
     private String dni;
     private String company;
 
-    public Ticket(String id, String origin, String destination, Date date, LocalTime time, String dni, String company) {
+    public TicketModel(String id, String origin, String destination, Date date, LocalTime time, String dni, String company) {
         this.id = id;
         this.origin = origin;
         this.destination = destination;
