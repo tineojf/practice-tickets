@@ -175,6 +175,11 @@ public class User extends javax.swing.JFrame {
         btnDelete.setForeground(new java.awt.Color(51, 51, 51));
         btnDelete.setText("Delete");
         btnDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnClean.setBackground(new java.awt.Color(255, 215, 0));
         btnClean.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -403,8 +408,9 @@ public class User extends javax.swing.JFrame {
                         fieldName.getText(),
                         fieldPhone.getText(),
                         fieldAddress.getText());
-                //UserDAO.postUser(usuarioNuevo);
+                UserDAO.postUser(usuarioNuevo);
                 JOptionPane.showMessageDialog(null, "Usuario registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.loadData();
 
             } else {
                 JOptionPane.showMessageDialog(null, "Error: DNI registrado.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -428,6 +434,15 @@ public class User extends javax.swing.JFrame {
         fieldPass.setText(usuarioBuscado.getPassword());
         fieldPhone.setText(usuarioBuscado.getPhone());
     }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        UserDAO.deleteUser(intID);
+        JOptionPane.showMessageDialog(null, "Usuario eliminado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        this.loadData();
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
