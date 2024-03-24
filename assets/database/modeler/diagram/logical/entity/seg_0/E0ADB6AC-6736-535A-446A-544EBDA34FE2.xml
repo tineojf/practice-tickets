@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0ADB6AC-6736-535A-446A-544EBDA34FE2" name="Companias">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:35:05 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="companiaID" id="DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:35:18 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="BC4B14BD-76A0-93A1-A84D-67F0F06B1D4C">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:35:29 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1B0E8D0E-4AF0-1E0E-92D7-7C0D5565F7E0" name="Companias PK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:35:27 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

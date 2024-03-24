@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="BE038A05-5C61-3902-27A7-E729221F3BC3">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:28:54 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

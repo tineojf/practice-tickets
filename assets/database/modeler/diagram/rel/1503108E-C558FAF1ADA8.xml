@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" mainViewID="E6A38553-FF48-9CB6-A4A8-99440C8D7690">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:28:54 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+</relationalModel>

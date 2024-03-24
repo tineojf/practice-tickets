@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="3B386BAF-2D55-5899-AF38-D572CC78FF99" mainViewID="865B5178-19F1-B677-AFC0-7249EDAC570B">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:28:54 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

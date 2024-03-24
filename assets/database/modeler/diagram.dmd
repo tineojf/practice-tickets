@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagram" id="084C0135-C777-350B-39F9-35563DA316D8" version="3.5">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:28:54 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>084C0135-C777-350B-39F9-35563DA316D8</designId>
+</OSDM_Design>

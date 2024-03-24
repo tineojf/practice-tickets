@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="compania_billete" directorySegmentName="seg_0" id="3D695C2A-48B9-0BC8-417E-AF1CDD5AD100">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-18 19:38:03 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<sourcePk>E53969B8-9ECF-B0B9-FAE2-ADB1936FF8D3</sourcePk>
+<targetPk>1B0E8D0E-4AF0-1E0E-92D7-7C0D5565F7E0</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>34D277FF-A513-DD91-0FE1-0CF0E9D038A2</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>E0ADB6AC-6736-535A-446A-544EBDA34FE2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

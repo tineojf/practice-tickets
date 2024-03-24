@@ -1,0 +1,165 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FEEA5457-7BDD-2827-2C0B-AC593F1E4C6C" name="Billetes">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>34D277FF-A513-DD91-0FE1-0CF0E9D038A2</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nro" id="066F75F1-AAA6-BC27-51F7-F575664FEB3C">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>32F504EB-7003-D279-B8EF-DF47D8CF88BA</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="F7BA1A7F-40B5-4B4A-621E-A0174C39344E">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>0EAE4376-68F6-8B01-1300-00A34EC14DB7</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="hora" id="DB437074-A126-426C-ECBB-B24ECB960771">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>D3AF592E-3EA7-BE4E-231D-A03B8BC3B1C1</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Companias_companiaID" id="BC25BF55-B7C9-9153-C6C5-C9DF34E14334">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>E706D2C4-F6FD-39AE-6530-DC854B4AD9E1</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9440E51C-1479-29F8-9932-5F6424490576" referredColumn="BEFD8C87-6096-7FF8-8953-C0C7D4BF7F3D"/>
+</associations>
+</Column>
+<Column name="Destino_lugarID" id="69D2DB02-ED97-D2C7-AD9D-8F5126C6ED81">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[destino]]></commentInRDBMS>
+<generatorID>46F94A91-43FF-0768-5233-368703A7D9FB</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2AA0492F-16C0-1DA8-EAE3-D02BC250AB49" referredColumn="8ECC48A8-41D8-FE46-10EC-D141A0D1335E"/>
+</associations>
+</Column>
+<Column name="Origen_lugarID2" id="19536CC3-9D41-7A60-4325-7E8BCA31139F">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<commentInRDBMS><![CDATA[origen]]></commentInRDBMS>
+<generatorID>AF9217FD-ACE6-47C0-60B6-F8F68F4E55E3</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5CAF1302-7F5C-6F39-1BFD-36A38FCF3EF5" referredColumn="8ECC48A8-41D8-FE46-10EC-D141A0D1335E"/>
+</associations>
+</Column>
+<Column name="Clientes_dni" id="75F4381E-B6E4-F6B1-1CE3-38FD18502661">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>3AA4BCC1-004B-E1A3-BEFA-404B9BB8DD30</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C18BBFBA-F4FE-5D1E-1DF7-7C20FCA39034" referredColumn="89162D40-C468-D6E8-DB84-F665856F35CF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91075B4D-A4BB-DCA9-F999-E8207B57FCB1" name="Billetes_PK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>E53969B8-9ECF-B0B9-FAE2-ADB1936FF8D3</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="066F75F1-AAA6-BC27-51F7-F575664FEB3C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="44C5D644-F5C7-FEE0-26A5-A45921A18BDC" name="Billetes_Lugares_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>DF728E25-E5B7-9672-634C-4CDE7BB7FED5</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="69D2DB02-ED97-D2C7-AD9D-8F5126C6ED81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24D808A4-06B5-C2DE-0043-437B14FBF95E" name="Billetes_Lugares_FKv2">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>42C1D218-B911-F6D2-403C-872B15577F05</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="19536CC3-9D41-7A60-4325-7E8BCA31139F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="955D8DB4-460C-FD08-FCFC-61862C463036" name="Billetes_Clientes_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>7A32C1BE-A5A2-2ECE-018A-8C691383DCCD</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75F4381E-B6E4-F6B1-1CE3-38FD18502661"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="62E43600-981E-02DA-7405-21C6B433AF55" name="Billetes_Companias_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<generatorID>3D695C2A-48B9-0BC8-417E-AF1CDD5AD100</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC25BF55-B7C9-9153-C6C5-C9DF34E14334"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
