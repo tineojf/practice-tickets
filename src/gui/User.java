@@ -169,6 +169,11 @@ public class User extends javax.swing.JFrame {
         btnUpdate.setForeground(new java.awt.Color(51, 51, 51));
         btnUpdate.setText("Update");
         btnUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setBackground(new java.awt.Color(255, 215, 0));
         btnDelete.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -404,8 +409,8 @@ public class User extends javax.swing.JFrame {
             if (usuarioRegistrado == null) {
                 UserModel usuarioNuevo = new UserModel(
                         fieldDNI.getText(),
-                        fieldPass.getText(),
                         fieldName.getText(),
+                        fieldPass.getText(),
                         fieldPhone.getText(),
                         fieldAddress.getText());
                 UserDAO.postUser(usuarioNuevo);
@@ -443,6 +448,37 @@ public class User extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Usuario eliminado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
         this.loadData();
     }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldDNI.getText());
+            UserModel usuarioRegistrado = UserDAO.getUserID(id);
+
+            if (usuarioRegistrado != null) {
+                UserModel usuarioNuevo = new UserModel(
+                        String.valueOf(id),
+                        fieldName.getText(),
+                        fieldPass.getText(),
+                        fieldPhone.getText(),
+                        fieldAddress.getText());
+                UserDAO.updateUser(id, usuarioNuevo);
+                JOptionPane.showMessageDialog(null, "Usuario actualizado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.loadData();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: DNI no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear el texto a entero: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
