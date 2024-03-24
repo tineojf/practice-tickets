@@ -64,6 +64,26 @@ public class UserDAO {
         }
     }
 
+    // GET - only ID
+    public static ArrayList<String> getUsersOnlyID() {
+        ArrayList<String> userIdList = new ArrayList<>();
+        String query = "SELECT DNI FROM CLIENTES";
+
+        try {
+            ResultSet result = connection.createStatement().executeQuery(query);
+
+            while (result.next()) {
+                String id = String.valueOf(result.getInt("DNI"));
+                userIdList.add(id);
+            }
+
+            return userIdList;
+        } catch (SQLException e) {
+            System.out.println("GET error: " + e.getMessage());
+            return null;
+        }
+    }
+
     // POST - User
     public static void postUser(UserModel user) {
         String query = "INSERT INTO CLIENTES "

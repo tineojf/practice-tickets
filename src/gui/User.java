@@ -12,11 +12,14 @@ public class User extends javax.swing.JFrame {
 
     public User() {
         initComponents();
+
         listField.add(fieldAddress);
         listField.add(fieldDNI);
         listField.add(fieldName);
         listField.add(fieldPass);
         listField.add(fieldPhone);
+
+        this.loadData();
     }
 
     /**
@@ -358,6 +361,15 @@ public class User extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void loadData() {
+        ArrayList<String> listaID = UserDAO.getUsersOnlyID();
+        selectSearch.removeAllItems();
+
+        for (String item : listaID) {
+            selectSearch.addItem(item);
+        }
+    }
 
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         // TODO add your handling code here:
