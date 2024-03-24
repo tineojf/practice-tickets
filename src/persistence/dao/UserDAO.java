@@ -39,7 +39,8 @@ public class UserDAO {
     }
 
     public static User getUserID(int id) {
-        String query = "SELECT * FROM CLIENTES WHERE DNI = " + String.valueOf(id);
+        String query = "SELECT * FROM CLIENTES WHERE DNI = "
+                + String.valueOf(id) + " FETCH FIRST 1 ROWS ONLY";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
@@ -63,7 +64,9 @@ public class UserDAO {
     }
 
     public static void postUser(User user) {
-        String query = "INSERT INTO CLIENTES (dni, nombre, password, telefono, direccion) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO CLIENTES "
+                + "(dni, nombre, password, telefono, direccion) "
+                + "VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, user.getDni());
@@ -82,4 +85,29 @@ public class UserDAO {
             System.err.println("POST error: " + e.getMessage());
         }
     }
+
+    public static void deleteUser(int id) {
+        User result = UserDAO.getUserID(id);
+
+        if (result != null) {
+            String query = "DELETE FROM CLIENTES WHERE dni = ?";
+
+            try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                preparedStatement.setInt(1, id);
+                System.out.println(query);
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("¡Usuario eliminado correctamente!");
+                } else {
+                    System.out.println("Error al eliminar el usuario.");
+                }
+            } catch (SQLException e) {
+                System.err.println("DELETE error: " + e.getMessage());
+            }
+        } else {
+            System.out.println("El usuario con ID " + id + " no existe.");
+        }
+    }
+
 }
