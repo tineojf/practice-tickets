@@ -26,4 +26,9 @@ public class Place {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Place{" + "id=" + id + ", name=" + name + '}';
+    }
+
 }

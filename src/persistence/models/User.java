@@ -56,4 +56,9 @@ public class User {
         this.address = address;
     }
 
+    @Override
+    public String toString() {
+        return "User{" + "dni=" + dni + ", password=" + password + ", name=" + name + ", phone=" + phone + ", address=" + address + '}';
+    }
+
 }

@@ -79,4 +79,9 @@ public class Ticket {
         this.company = company;
     }
 
+    @Override
+    public String toString() {
+        return "Ticket{" + "id=" + id + ", origin=" + origin + ", destination=" + destination + ", date=" + date + ", time=" + time + ", dni=" + dni + ", company=" + company + '}';
+    }
+
 }
