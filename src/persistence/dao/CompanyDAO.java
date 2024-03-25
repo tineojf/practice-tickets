@@ -122,7 +122,7 @@ public class CompanyDAO {
     }
 
     // PUT
-    public static void updateUser(int id, CompanyModel company) {
+    public static void update(int id, CompanyModel company) {
         CompanyModel result = CompanyDAO.findByID(id);
 
         if (result != null) {
