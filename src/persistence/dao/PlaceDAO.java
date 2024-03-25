@@ -6,24 +6,24 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import persistence.models.CompanyModel;
+import persistence.models.PlaceModel;
 
-public class CompanyDAO {
+public class PlaceDAO {
 
     private static final ConnectorDB connector = ConnectorDB.getInstance();
     private static final Connection connection = connector.getConnection();
 
     // GET All
-    public static ArrayList<CompanyModel> findAll() {
-        ArrayList<CompanyModel> listDB = new ArrayList<>();
-        String query = "SELECT * FROM COMPANIAS";
+    public static ArrayList<PlaceModel> findAll() {
+        ArrayList<PlaceModel> listDB = new ArrayList<>();
+        String query = "SELECT * FROM LUGARES";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
 
             while (result.next()) {
-                listDB.add(new CompanyModel(
-                        String.valueOf(result.getInt("COMPANIAID")),
+                listDB.add(new PlaceModel(
+                        String.valueOf(result.getInt("LUGARID")),
                         result.getString("NOMBRE")
                 ));
             }
@@ -36,16 +36,16 @@ public class CompanyDAO {
     }
 
     // GET by ID
-    public static CompanyModel findByID(int id) {
-        String query = "SELECT * FROM COMPANIAS WHERE COMPANIAID = "
+    public static PlaceModel findByID(int id) {
+        String query = "SELECT * FROM LUGARES WHERE LUGARID = "
                 + String.valueOf(id) + " FETCH FIRST 1 ROWS ONLY";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
 
             if (result.next()) {
-                CompanyModel item = new CompanyModel(
-                        String.valueOf(result.getInt("COMPANIAID")),
+                PlaceModel item = new PlaceModel(
+                        String.valueOf(result.getInt("LUGARID")),
                         result.getString("NOMBRE")
                 );
                 return item;
@@ -61,13 +61,13 @@ public class CompanyDAO {
     // GET
     public static ArrayList<String> findOnlyID() {
         ArrayList<String> listBD = new ArrayList<>();
-        String query = "SELECT COMPANIAID FROM COMPANIAS";
+        String query = "SELECT LUGARID FROM LUGARES";
 
         try {
             ResultSet result = connection.createStatement().executeQuery(query);
 
             while (result.next()) {
-                String id = String.valueOf(result.getInt("COMPANIAID"));
+                String id = String.valueOf(result.getInt("LUGARID"));
                 listBD.add(id);
             }
 
@@ -79,8 +79,8 @@ public class CompanyDAO {
     }
 
     // POST
-    public static void create(CompanyModel company) {
-        String query = "INSERT INTO COMPANIAS " + "(COMPANIAID, NOMBRE) " + "VALUES (?, ?)";
+    public static void create(PlaceModel company) {
+        String query = "INSERT INTO LUGARES " + "(LUGARID, NOMBRE) " + "VALUES (?, ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setString(1, company.getId());
@@ -88,9 +88,9 @@ public class CompanyDAO {
 
             int rowsInserted = preparedStatement.executeUpdate();
             if (rowsInserted > 0) {
-                System.out.println("¡Compañia insertado correctamente!");
+                System.out.println("¡Lugar insertado correctamente!");
             } else {
-                System.out.println("Error al insertar la compañia.");
+                System.out.println("Error al insertar el lugar.");
             }
         } catch (SQLException e) {
             System.err.println("POST error: " + e.getMessage());
@@ -99,34 +99,34 @@ public class CompanyDAO {
 
     // DELETE
     public static void delete(int id) {
-        CompanyModel result = CompanyDAO.findByID(id);
+        PlaceModel result = PlaceDAO.findByID(id);
 
         if (result != null) {
-            String query = "DELETE FROM COMPANIAS WHERE COMPANIAID = ?";
+            String query = "DELETE FROM LUGARES WHERE LUGARID = ?";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setInt(1, id);
                 int rowsDeleted = preparedStatement.executeUpdate();
 
                 if (rowsDeleted > 0) {
-                    System.out.println("¡Compañia eliminado correctamente!");
+                    System.out.println("¡Lugar eliminado correctamente!");
                 } else {
-                    System.out.println("Error al eliminar la compañia.");
+                    System.out.println("Error al eliminar el lugar.");
                 }
             } catch (SQLException e) {
                 System.err.println("DELETE error: " + e.getMessage());
             }
         } else {
-            System.out.println("La compañia con ID " + id + " no existe.");
+            System.out.println("El lugar con ID " + id + " no existe.");
         }
     }
 
     // PUT
-    public static void update(int id, CompanyModel company) {
-        CompanyModel result = CompanyDAO.findByID(id);
+    public static void update(int id, PlaceModel company) {
+        PlaceModel result = PlaceDAO.findByID(id);
 
         if (result != null) {
-            String query = "UPDATE COMPANIAS SET NOMBRE = ? WHERE COMPANIAID = ?";
+            String query = "UPDATE LUGARES SET NOMBRE = ? WHERE LUGARID = ?";
 
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, company.getName());
@@ -135,15 +135,15 @@ public class CompanyDAO {
                 int rowsUpdated = preparedStatement.executeUpdate();
 
                 if (rowsUpdated > 0) {
-                    System.out.println("¡Compañia actualizada correctamente!");
+                    System.out.println("¡Lugar actualizado correctamente!");
                 } else {
-                    System.out.println("Error al actualizar la compañia.");
+                    System.out.println("Error al actualizar el lugar.");
                 }
             } catch (SQLException e) {
                 System.err.println("UPDATE error: " + e.getMessage());
             }
         } else {
-            System.out.println("La compañia con ID " + id + " no existe.");
+            System.out.println("El lugar con ID " + id + " no existe.");
         }
     }
 

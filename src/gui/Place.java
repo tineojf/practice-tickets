@@ -1,7 +1,11 @@
 package gui;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import logic.tools.Tools;
+import persistence.dao.PlaceDAO;
+import persistence.models.PlaceModel;
 
 public class Place extends javax.swing.JFrame {
 
@@ -9,8 +13,11 @@ public class Place extends javax.swing.JFrame {
 
     public Place() {
         initComponents();
+
         listField.add(fieldID);
         listField.add(fieldPlace);
+
+        this.loadData();
     }
 
     /**
@@ -116,18 +123,33 @@ public class Place extends javax.swing.JFrame {
         btnCreate.setForeground(new java.awt.Color(51, 51, 51));
         btnCreate.setText("Create");
         btnCreate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setBackground(new java.awt.Color(255, 215, 0));
         btnUpdate.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(51, 51, 51));
         btnUpdate.setText("Update");
         btnUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setBackground(new java.awt.Color(255, 215, 0));
         btnDelete.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(51, 51, 51));
         btnDelete.setText("Delete");
         btnDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnClean.setBackground(new java.awt.Color(255, 215, 0));
         btnClean.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -145,6 +167,11 @@ public class Place extends javax.swing.JFrame {
         btnSearch.setForeground(new java.awt.Color(51, 51, 51));
         btnSearch.setText("Search");
         btnSearch.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelCrudLayout = new javax.swing.GroupLayout(panelCrud);
         panelCrud.setLayout(panelCrudLayout);
@@ -224,7 +251,7 @@ public class Place extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "ID", "Destino"
+                "ID", "Lugar"
             }
         ) {
             Class[] types = new Class [] {
@@ -293,6 +320,28 @@ public class Place extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void loadData() {
+        // load id in Select Field
+        ArrayList<String> listaID = PlaceDAO.findOnlyID();
+        selectSearch.removeAllItems();
+
+        for (String item : listaID) {
+            selectSearch.addItem(item);
+        }
+
+        // load data in jtable
+        ArrayList<PlaceModel> listaPlace = PlaceDAO.findAll();
+        DefaultTableModel tabla = new DefaultTableModel();
+        tabla.addColumn("ID");
+        tabla.addColumn("Lugar");
+
+        for (PlaceModel place : listaPlace) {
+            tabla.addRow(new Object[]{place.getId(), place.getName()});
+        }
+
+        this.table.setModel(tabla);
+    }
+
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         // TODO add your handling code here:
         Tools.cleanField(listField);
@@ -302,6 +351,81 @@ public class Place extends javax.swing.JFrame {
         // TODO add your handling code here:
         Tools.goToOperations(this);
     }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldID.getText());
+            PlaceModel lugarRegistrado = PlaceDAO.findByID(id);
+
+            if (lugarRegistrado == null) {
+                PlaceModel lugarNuevo = new PlaceModel(
+                        fieldID.getText(),
+                        fieldPlace.getText());
+                PlaceDAO.create(lugarNuevo);
+                JOptionPane.showMessageDialog(null, "Lugar registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.loadData();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: ID registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear el texto a entero: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldID.getText());
+            PlaceModel lugarRegistrado = PlaceDAO.findByID(id);
+
+            if (lugarRegistrado != null) {
+                PlaceModel lugarNuevo = new PlaceModel(
+                        String.valueOf(id),
+                        fieldPlace.getText());
+                PlaceDAO.update(id, lugarNuevo);
+                JOptionPane.showMessageDialog(null, "Lugar actualizado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.loadData();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: ID no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear el texto a entero: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        PlaceDAO.delete(intID);
+        JOptionPane.showMessageDialog(null, "Lugar eliminada exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        this.loadData();
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        PlaceModel lugarBuscado = PlaceDAO.findByID(intID);
+
+        fieldID.setText(lugarBuscado.getId());
+        fieldPlace.setText(lugarBuscado.getName());
+    }//GEN-LAST:event_btnSearchActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
