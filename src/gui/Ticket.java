@@ -1,7 +1,20 @@
 package gui;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import logic.tools.Tools;
+import persistence.dao.TicketDAO;
+import persistence.dao.PlaceDAO;
+import persistence.dao.CompanyDAO;
+import persistence.dao.UserDAO;
+import persistence.models.TicketModel;
 
 public class Ticket extends javax.swing.JFrame {
 
@@ -9,13 +22,12 @@ public class Ticket extends javax.swing.JFrame {
 
     public Ticket() {
         initComponents();
-        listField.add(fieldClient);
-        listField.add(fieldCompany);
+
         listField.add(fieldDate);
-        listField.add(fieldDestination);
         listField.add(fieldNRO);
-        listField.add(fieldOrigin);
         listField.add(fieldTime);
+
+        this.loadData();
     }
 
     /**
@@ -39,13 +51,9 @@ public class Ticket extends javax.swing.JFrame {
         lbTime = new javax.swing.JLabel();
         fieldTime = new javax.swing.JTextField();
         lbOrigin = new javax.swing.JLabel();
-        fieldOrigin = new javax.swing.JTextField();
         lbDestination = new javax.swing.JLabel();
-        fieldDestination = new javax.swing.JTextField();
         lbClient = new javax.swing.JLabel();
-        fieldClient = new javax.swing.JTextField();
         lbCompany = new javax.swing.JLabel();
-        fieldCompany = new javax.swing.JTextField();
         lbSearch = new javax.swing.JLabel();
         selectSearch = new javax.swing.JComboBox<>();
         btnCreate = new javax.swing.JButton();
@@ -53,6 +61,10 @@ public class Ticket extends javax.swing.JFrame {
         btnDelete = new javax.swing.JButton();
         btnClean = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
+        selectClient = new javax.swing.JComboBox<>();
+        selectCompany = new javax.swing.JComboBox<>();
+        selectOrigin = new javax.swing.JComboBox<>();
+        selectDestination = new javax.swing.JComboBox<>();
         panelTable = new javax.swing.JPanel();
         subpanelTable = new javax.swing.JScrollPane();
         table = new javax.swing.JTable();
@@ -133,37 +145,17 @@ public class Ticket extends javax.swing.JFrame {
         lbOrigin.setForeground(new java.awt.Color(30, 30, 30));
         lbOrigin.setText("Origen:");
 
-        fieldOrigin.setBackground(new java.awt.Color(247, 247, 247));
-        fieldOrigin.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldOrigin.setForeground(new java.awt.Color(30, 30, 30));
-        fieldOrigin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         lbDestination.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbDestination.setForeground(new java.awt.Color(30, 30, 30));
         lbDestination.setText("Destino:");
-
-        fieldDestination.setBackground(new java.awt.Color(247, 247, 247));
-        fieldDestination.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldDestination.setForeground(new java.awt.Color(30, 30, 30));
-        fieldDestination.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lbClient.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbClient.setForeground(new java.awt.Color(30, 30, 30));
         lbClient.setText("Cliente:");
 
-        fieldClient.setBackground(new java.awt.Color(247, 247, 247));
-        fieldClient.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldClient.setForeground(new java.awt.Color(30, 30, 30));
-        fieldClient.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
         lbCompany.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbCompany.setForeground(new java.awt.Color(30, 30, 30));
         lbCompany.setText("Compañía:");
-
-        fieldCompany.setBackground(new java.awt.Color(247, 247, 247));
-        fieldCompany.setFont(new java.awt.Font("URW Gothic L", 0, 18)); // NOI18N
-        fieldCompany.setForeground(new java.awt.Color(30, 30, 30));
-        fieldCompany.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lbSearch.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbSearch.setForeground(new java.awt.Color(30, 30, 30));
@@ -176,18 +168,33 @@ public class Ticket extends javax.swing.JFrame {
         btnCreate.setForeground(new java.awt.Color(51, 51, 51));
         btnCreate.setText("Create");
         btnCreate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setBackground(new java.awt.Color(255, 215, 0));
         btnUpdate.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(51, 51, 51));
         btnUpdate.setText("Update");
         btnUpdate.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setBackground(new java.awt.Color(255, 215, 0));
         btnDelete.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
         btnDelete.setForeground(new java.awt.Color(51, 51, 51));
         btnDelete.setText("Delete");
         btnDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnClean.setBackground(new java.awt.Color(255, 215, 0));
         btnClean.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
@@ -205,6 +212,19 @@ public class Ticket extends javax.swing.JFrame {
         btnSearch.setForeground(new java.awt.Color(51, 51, 51));
         btnSearch.setText("Search");
         btnSearch.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+
+        selectClient.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        selectCompany.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        selectOrigin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        selectDestination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout panelCrudLayout = new javax.swing.GroupLayout(panelCrud);
         panelCrud.setLayout(panelCrudLayout);
@@ -228,8 +248,8 @@ public class Ticket extends javax.swing.JFrame {
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelCrudLayout.createSequentialGroup()
                                 .addComponent(lbClient)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                                .addComponent(fieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(selectClient, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelCrudLayout.createSequentialGroup()
                                 .addComponent(lbNRO)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -240,7 +260,7 @@ public class Ticket extends javax.swing.JFrame {
                                 .addComponent(fieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelCrudLayout.createSequentialGroup()
                                 .addComponent(lbDate)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
                                 .addComponent(fieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(132, 132, 132)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,11 +270,11 @@ public class Ticket extends javax.swing.JFrame {
                             .addComponent(lbSearch))
                         .addGap(59, 59, 59)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(fieldDestination, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldCompany, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fieldOrigin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(selectSearch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(selectSearch, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(selectCompany, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(selectOrigin, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(selectDestination, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         panelCrudLayout.setVerticalGroup(
             panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -265,13 +285,15 @@ public class Ticket extends javax.swing.JFrame {
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbNRO)
                             .addComponent(fieldNRO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbOrigin))
+                            .addComponent(lbOrigin)
+                            .addComponent(selectOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbDate)
                             .addComponent(fieldDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbDestination))
-                        .addGap(12, 12, 12)
+                            .addComponent(lbDestination)
+                            .addComponent(selectDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)
                         .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelCrudLayout.createSequentialGroup()
                                 .addComponent(lbCompany)
@@ -281,16 +303,13 @@ public class Ticket extends javax.swing.JFrame {
                                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(fieldTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lbTime))
-                                .addGap(13, 13, 13)
+                                .addGap(14, 14, 14)
                                 .addGroup(panelCrudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(fieldClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbClient)))))
+                                    .addComponent(lbClient)
+                                    .addComponent(selectClient, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(panelCrudLayout.createSequentialGroup()
-                        .addComponent(fieldOrigin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(fieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(fieldCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)
+                        .addComponent(selectCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(selectSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
@@ -390,6 +409,66 @@ public class Ticket extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void loadData() {
+        // load id in Select Search
+        ArrayList<String> listaID = TicketDAO.findOnlyID();
+        selectSearch.removeAllItems();
+
+        for (String item : listaID) {
+            selectSearch.addItem(item);
+        }
+
+        // load id Client in Select Client
+        ArrayList<String> listaIDClient = UserDAO.getUsersOnlyID();
+        selectClient.removeAllItems();
+
+        for (String item : listaIDClient) {
+            selectClient.addItem(item);
+        }
+
+        // load id Client in Select Company
+        ArrayList<String> listaIDCompany = CompanyDAO.findOnlyID();
+        selectCompany.removeAllItems();
+
+        for (String item : listaIDCompany) {
+            selectCompany.addItem(item);
+        }
+
+        // load id Client in Select Destination
+        ArrayList<String> listaIDDestination = PlaceDAO.findOnlyID();
+        selectDestination.removeAllItems();
+
+        for (String item : listaIDDestination) {
+            selectDestination.addItem(item);
+        }
+
+        // load id Client in Select Origin
+        ArrayList<String> listaIDOrigin = PlaceDAO.findOnlyID();
+        selectOrigin.removeAllItems();
+
+        for (String item : listaIDOrigin) {
+            selectOrigin.addItem(item);
+        }
+
+        // load data in jtable
+        ArrayList<TicketModel> listaCompany = TicketDAO.findAll();
+        DefaultTableModel tabla = new DefaultTableModel();
+        tabla.addColumn("NRO");
+        tabla.addColumn("FECHA");
+        tabla.addColumn("HORA");
+        tabla.addColumn("COMPAÑIA");
+        tabla.addColumn("ORIGEN");
+        tabla.addColumn("DESTINO");
+        tabla.addColumn("CLIENTE");
+
+        for (TicketModel ticket : listaCompany) {
+            tabla.addRow(new Object[]{ticket.getId(), ticket.getDate(), ticket.getTime(), ticket.getCompany(),
+                ticket.getOrigin(), ticket.getDestination(), ticket.getDni()});
+        }
+
+        this.table.setModel(tabla);
+    }
+
     private void btnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCleanActionPerformed
         // TODO add your handling code here:
         Tools.cleanField(listField);
@@ -400,6 +479,122 @@ public class Ticket extends javax.swing.JFrame {
         Tools.goToOperations(this);
     }//GEN-LAST:event_btnHomeActionPerformed
 
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldNRO.getText());
+            TicketModel companiaRegistrado = TicketDAO.findByID(id);
+
+            if (companiaRegistrado == null) {
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                Date date;
+                LocalTime time;
+
+                String dateText = fieldDate.getText();
+                String timeText = fieldTime.getText();
+
+                date = dateFormat.parse(dateText);
+                time = LocalTime.parse(timeText);
+
+                TicketModel companiaNuevo = new TicketModel(
+                        fieldNRO.getText(),
+                        selectOrigin.getSelectedItem().toString(),
+                        selectDestination.getSelectedItem().toString(),
+                        date,
+                        time,
+                        selectClient.getSelectedItem().toString(),
+                        selectCompany.getSelectedItem().toString()
+                );
+                TicketDAO.create(companiaNuevo);
+                JOptionPane.showMessageDialog(null, "Ticket registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                this.loadData();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: ID registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear texto: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (ParseException ex) {
+            Logger.getLogger(Ticket.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        // TODO add your handling code here:
+        if (!Tools.verifiedTextNotEmpty(listField)) {
+            return;
+        }
+
+        try {
+            int id = Integer.parseInt(fieldNRO.getText());
+            TicketModel existingTicket = TicketDAO.findByID(id);
+
+            if (existingTicket != null) {
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+
+                Date date = dateFormat.parse(fieldDate.getText());
+                LocalTime time = LocalTime.parse(fieldTime.getText());
+
+                existingTicket.setId(fieldNRO.getText());
+                existingTicket.setOrigin(selectOrigin.getSelectedItem().toString());
+                existingTicket.setDestination(selectDestination.getSelectedItem().toString());
+                existingTicket.setDate(date);
+                existingTicket.setTime(time);
+                existingTicket.setDni(selectClient.getSelectedItem().toString());
+                existingTicket.setCompany(selectCompany.getSelectedItem().toString());
+
+                TicketDAO.update(id, existingTicket);
+
+                JOptionPane.showMessageDialog(null, "Ticket actualizado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+                this.loadData();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "Error: ID no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Error al parsear texto: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error: El texto no es un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (ParseException ex) {
+            Logger.getLogger(Ticket.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error al convertir fecha/hora.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        TicketDAO.delete(intID);
+        JOptionPane.showMessageDialog(null, "Ticket eliminado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        this.loadData();
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        String stringID = selectSearch.getSelectedItem().toString();
+        int intID = Integer.parseInt(stringID);
+        TicketModel companiaBuscado = TicketDAO.findByID(intID);
+
+        String dateText = new SimpleDateFormat("dd-MM-yyyy").format(companiaBuscado.getDate());
+        String timeText = companiaBuscado.getTime().toString();
+
+        fieldNRO.setText(companiaBuscado.getId());
+        fieldDate.setText(dateText);
+        fieldTime.setText(timeText);
+        selectClient.setSelectedItem(companiaBuscado.getDni());
+        selectCompany.setSelectedItem(companiaBuscado.getCompany());
+        selectDestination.setSelectedItem(companiaBuscado.getDestination());
+        selectOrigin.setSelectedItem(companiaBuscado.getOrigin());
+    }//GEN-LAST:event_btnSearchActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClean;
@@ -408,12 +603,8 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JButton btnHome;
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
-    private javax.swing.JTextField fieldClient;
-    private javax.swing.JTextField fieldCompany;
     private javax.swing.JTextField fieldDate;
-    private javax.swing.JTextField fieldDestination;
     private javax.swing.JTextField fieldNRO;
-    private javax.swing.JTextField fieldOrigin;
     private javax.swing.JTextField fieldTime;
     private javax.swing.JLabel lbClient;
     private javax.swing.JLabel lbCompany;
@@ -428,6 +619,10 @@ public class Ticket extends javax.swing.JFrame {
     private javax.swing.JPanel panelCrud;
     private javax.swing.JPanel panelTable;
     private javax.swing.JPanel panelTitle;
+    private javax.swing.JComboBox<String> selectClient;
+    private javax.swing.JComboBox<String> selectCompany;
+    private javax.swing.JComboBox<String> selectDestination;
+    private javax.swing.JComboBox<String> selectOrigin;
     private javax.swing.JComboBox<String> selectSearch;
     private javax.swing.JScrollPane subpanelTable;
     private javax.swing.JTable table;
