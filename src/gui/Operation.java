@@ -1,7 +1,5 @@
 package gui;
 
-import logic.tools.Tools;
-
 public class Operation extends javax.swing.JFrame {
 
     public Operation() {
@@ -20,7 +18,6 @@ public class Operation extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         panelTitle = new javax.swing.JPanel();
         lbTitle = new javax.swing.JLabel();
-        btnLogout = new javax.swing.JButton();
         panelOperation = new javax.swing.JPanel();
         btnPlace = new javax.swing.JButton();
         btnCompany = new javax.swing.JButton();
@@ -47,17 +44,6 @@ public class Operation extends javax.swing.JFrame {
         lbTitle.setText("NPB - Operaciones");
         lbTitle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        btnLogout.setBackground(new java.awt.Color(255, 215, 0));
-        btnLogout.setFont(new java.awt.Font("URW Gothic", 0, 24)); // NOI18N
-        btnLogout.setForeground(new java.awt.Color(51, 51, 51));
-        btnLogout.setText("Logout");
-        btnLogout.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout panelTitleLayout = new javax.swing.GroupLayout(panelTitle);
         panelTitle.setLayout(panelTitleLayout);
         panelTitleLayout.setHorizontalGroup(
@@ -65,17 +51,13 @@ public class Operation extends javax.swing.JFrame {
             .addGroup(panelTitleLayout.createSequentialGroup()
                 .addGap(61, 61, 61)
                 .addComponent(lbTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(92, 92, 92))
+                .addContainerGap(454, Short.MAX_VALUE))
         );
         panelTitleLayout.setVerticalGroup(
             panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTitleLayout.createSequentialGroup()
                 .addContainerGap(39, Short.MAX_VALUE)
-                .addGroup(panelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbTitle))
+                .addComponent(lbTitle)
                 .addGap(22, 22, 22))
         );
 
@@ -167,7 +149,7 @@ public class Operation extends javax.swing.JFrame {
 
         lbName.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         lbName.setForeground(new java.awt.Color(30, 30, 30));
-        lbName.setText("BIENVENIDO, USUARIO REGISTRADO");
+        lbName.setText("BIENVENIDO, ADMIN");
 
         javax.swing.GroupLayout panelOperationLayout = new javax.swing.GroupLayout(panelOperation);
         panelOperation.setLayout(panelOperationLayout);
@@ -252,11 +234,6 @@ public class Operation extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        // TODO add your handling code here:
-        Tools.goToLogin(this);
-    }//GEN-LAST:event_btnLogoutActionPerformed
-
     private void btnTicketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTicketActionPerformed
         // TODO add your handling code here:
         this.dispose();
@@ -292,7 +269,6 @@ public class Operation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCompany;
-    private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnPlace;
     private javax.swing.JButton btnTicket;
     private javax.swing.JButton btnUser;
