@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C0560815-6143-ACB2-BC97-0C3A807ECB5A" containerWithKeyObject="EB26ED16-C2B3-E3B6-8749-9001D3BFE411" localFKIndex="F7723DAA-3CD1-1CD9-D0D3-03D75EB63F35" name="Ticket_Company_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<generatorID>9D95EC8A-832F-C5AB-04B0-4CE37BEA8FAE</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<referredTableLongName>Company</referredTableLongName>
+<deleteRule>CASCADE</deleteRule>
+<referredTableID>A2441228-FB4A-B018-9AF2-715E0CC63AA5</referredTableID>
+<keyObject>15499035-593F-A920-3B60-F203E9D66614</keyObject>
+<referredKeyID>15499035-593F-A920-3B60-F203E9D66614</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>companyNro</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

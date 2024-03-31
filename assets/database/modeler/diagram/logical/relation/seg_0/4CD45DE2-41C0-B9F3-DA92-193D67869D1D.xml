@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="billete_destino" directorySegmentName="seg_0" id="DF728E25-E5B7-9672-634C-4CDE7BB7FED5">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="origin_ticket" directorySegmentName="seg_0" id="4CD45DE2-41C0-B9F3-DA92-193D67869D1D">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:42:37 UTC</createdTime>
+<createdTime>2024-03-31 18:09:53 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
@@ -9,7 +9,6 @@
 <sourcePk>2E67CD32-6C5F-31E4-BF4D-6BB98A97AA21</sourcePk>
 <targetPk>E53969B8-9ECF-B0B9-FAE2-ADB1936FF8D3</targetPk>
 <identifying>false</identifying>
-<nameOnTarget>destino</nameOnTarget>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>

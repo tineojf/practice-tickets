@@ -1,17 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cliente_billete" directorySegmentName="seg_0" id="7A32C1BE-A5A2-2ECE-018A-8C691383DCCD">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="destination_ticket" directorySegmentName="seg_0" id="F188DB4A-4F8A-F5FF-BF33-9D4BE85DFE2E">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-18 19:37:09 UTC</createdTime>
+<createdTime>2024-03-31 18:10:44 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
 </engineerTo>
-<sourcePk>C34D4AE6-F622-B9AA-CC77-6FF7F782C2B6</sourcePk>
+<sourcePk>2E67CD32-6C5F-31E4-BF4D-6BB98A97AA21</sourcePk>
+<targetPk>E53969B8-9ECF-B0B9-FAE2-ADB1936FF8D3</targetPk>
 <identifying>false</identifying>
 <optionalSource>false</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>DB290955-C660-33AB-5BFF-A52D62BAA4F1</sourceEntity>
+<sourceEntity>18D8383F-8CBF-0930-2ACE-29381756EA55</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>34D277FF-A513-DD91-0FE1-0CF0E9D038A2</targetEntity>
 <transferable>true</transferable>

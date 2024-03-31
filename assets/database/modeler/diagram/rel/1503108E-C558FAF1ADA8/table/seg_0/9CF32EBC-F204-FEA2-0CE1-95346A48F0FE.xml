@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1400E1F5-39D0-AE25-D69A-ACC62D56D513" name="Clientes">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9CF32EBC-F204-FEA2-0CE1-95346A48F0FE" name="User">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>DB290955-C660-33AB-5BFF-A52D62BAA4F1</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="dni" id="89162D40-C468-D6E8-DB84-F665856F35CF">
+<Column name="dni" id="423A4AE8-AF31-D164-E8AA-442791999F63">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>39164A28-520B-B349-A3B9-3BAFC0C4A2B0</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -19,21 +19,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="password" id="A7DEEE22-898E-5B4A-6F57-EB67C2C99EDF">
+<Column name="nameUser" id="43EC1856-AF9F-2B19-F663-A6C4571CCF7C">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
-<generatorID>91FC0B98-FC1A-A9E1-AE3C-4CDAB6E886F5</generatorID>
-<ownerDesignName>diagram</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="nombre" id="892BF5C6-1B57-5951-063D-4546250A38DB">
-<createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>0E1C222C-2AD3-B807-8522-6028F469BE57</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -43,9 +31,21 @@
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="telefono" id="D60E6D56-E457-9A3B-0228-A2E71E7C54A7">
+<Column name="passwordUser" id="FDFC0337-39E4-AC06-61B1-FF1887A0F544">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<generatorID>91FC0B98-FC1A-A9E1-AE3C-4CDAB6E886F5</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="4F5B5DFE-F232-7188-817F-B6BB36F01EBE">
+<createdBy>tineo</createdBy>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>015412B0-8B90-1C1F-C96F-89A20807C5EF</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -55,30 +55,30 @@
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="direccion" id="2B2B5646-C1CA-6417-640D-BCF5D2D28031">
+<Column name="address" id="663DB818-27FD-4567-21B0-172DD64B996B">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>20CD04FA-1274-2A8F-388C-D8F3246EF808</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>150</dataTypeSize>
-<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="842527EB-0DA4-F290-3EBD-1ADE9FCE2DD8" name="Clientes_PK">
+<ind_PK_UK id="C09B3135-D989-89EF-1E9E-154106749E7C" name="User_PK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-23 21:55:06 UTC</createdTime>
+<createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>C34D4AE6-F622-B9AA-CC77-6FF7F782C2B6</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="89162D40-C468-D6E8-DB84-F665856F35CF"/>
+<colUsage columnID="423A4AE8-AF31-D164-E8AA-442791999F63"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

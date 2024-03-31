@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0ADB6AC-6736-535A-446A-544EBDA34FE2" name="Companias">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E0ADB6AC-6736-535A-446A-544EBDA34FE2" name="Company">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-18 19:35:05 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="companiaID" id="DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C">
+<Attribute name="companyNro" id="DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-18 19:35:18 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nombre" id="BC4B14BD-76A0-93A1-A84D-67F0F06B1D4C">
+<Attribute name="nameCompany" id="BC4B14BD-76A0-93A1-A84D-67F0F06B1D4C">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-18 19:35:29 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -42,7 +42,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="1B0E8D0E-4AF0-1E0E-92D7-7C0D5565F7E0" name="Companias PK">
+<identifier id="1B0E8D0E-4AF0-1E0E-92D7-7C0D5565F7E0" name="Company PK">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-18 19:35:27 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
@@ -50,6 +50,7 @@
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
 </engineerTo>
 <pk>true</pk>
+<newElementsIDs>DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C</newElementsIDs>
 <usedAttributes>
 <attributeRef>DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C</attributeRef>
 </usedAttributes>
