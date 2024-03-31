@@ -71,7 +71,7 @@
 <colAssociation fkAssociation="2B2F427D-5661-0737-1AE8-9D28AC9E6FC2" referredColumn="2B911096-9E0A-6188-178E-2A484128FFB9"/>
 </associations>
 </Column>
-<Column name="User_dni" id="1E769122-0CF5-D995-D366-7A7C09E061BC">
+<Column name="Person_dni" id="1E769122-0CF5-D995-D366-7A7C09E061BC">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>0F7CEFDB-5141-BFC3-6979-C0E74474911C</generatorID>
@@ -148,7 +148,7 @@
 <colUsage columnID="73CEB727-6526-0DD4-E0DB-7F89625C8B71"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="7EF6CB5E-5066-5DA1-25F3-F81600553999" name="Ticket_User_FK">
+<ind_PK_UK id="7EF6CB5E-5066-5DA1-25F3-F81600553999" name="Ticket_Person_FK">
 <createdBy>tineo</createdBy>
 <createdTime>2024-03-31 18:16:05 UTC</createdTime>
 <generatorID>1A5D470F-BC07-96C6-7809-7B8D40DB4869</generatorID>
