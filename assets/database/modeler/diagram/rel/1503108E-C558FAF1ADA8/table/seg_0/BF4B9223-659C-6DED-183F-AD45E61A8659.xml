@@ -1,17 +1,17 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A2441228-FB4A-B018-9AF2-715E0CC63AA5" name="Company">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF4B9223-659C-6DED-183F-AD45E61A8659" name="Place">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
-<generatorID>E0ADB6AC-6736-535A-446A-544EBDA34FE2</generatorID>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>18D8383F-8CBF-0930-2ACE-29381756EA55</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="companyNro" id="CBF63E41-DD6F-15DD-B1EE-A58849C417FE">
+<Column name="placeID" id="79A51A77-10F1-9A0C-E141-A24575E4B2AF">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
-<generatorID>DF0AB3FE-ED02-A36C-246C-FA6E7BBEBE8C</generatorID>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>AC9A0B99-8AA5-77B0-888D-000BA593E7C6</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -19,30 +19,30 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="nameCompany" id="B21415E4-7F65-DAB5-DD85-19FF01968CA7">
+<Column name="namePlace" id="423C7319-7636-8A79-4DB5-BB26370A8BCF">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
-<generatorID>BC4B14BD-76A0-93A1-A84D-67F0F06B1D4C</generatorID>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>451CDF30-2C82-8C0F-BA8A-BBCE2092583F</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="15499035-593F-A920-3B60-F203E9D66614" name="Company_PK">
+<ind_PK_UK id="A9DC894E-95D2-D3D4-DBC8-992FEDE50E24" name="Place_PK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
-<generatorID>1B0E8D0E-4AF0-1E0E-92D7-7C0D5565F7E0</generatorID>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>2E67CD32-6C5F-31E4-BF4D-6BB98A97AA21</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="CBF63E41-DD6F-15DD-B1EE-A58849C417FE"/>
+<colUsage columnID="79A51A77-10F1-9A0C-E141-A24575E4B2AF"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

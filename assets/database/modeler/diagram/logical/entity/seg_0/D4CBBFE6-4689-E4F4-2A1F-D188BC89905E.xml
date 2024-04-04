@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB290955-C660-33AB-5BFF-A52D62BAA4F1" name="Person">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D4CBBFE6-4689-E4F4-2A1F-D188BC89905E" name="Address">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-18 19:32:20 UTC</createdTime>
+<createdTime>2024-04-04 20:47:30 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="dni" id="39164A28-520B-B349-A3B9-3BAFC0C4A2B0">
+<Attribute name="addressID" id="76A5FB81-65CE-CFD9-2179-6267ED661DD0">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-18 19:32:35 UTC</createdTime>
+<createdTime>2024-04-04 20:47:37 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
@@ -27,9 +27,9 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nameUser" id="0E1C222C-2AD3-B807-8522-6028F469BE57">
+<Attribute name="addressName" id="83BE98E9-524D-4443-E0FF-5D4A0518F0F0">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-18 19:32:58 UTC</createdTime>
+<createdTime>2024-04-04 20:47:46 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
@@ -40,33 +40,32 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="lastNameUser" id="248158E7-0F16-02ED-E80B-50956ECE6284">
+<Attribute name="dni" id="958B0444-7C05-1C4F-80E8-1720888CC778">
 <createdBy>tineo</createdBy>
-<createdTime>2024-04-04 20:45:50 UTC</createdTime>
+<createdTime>2024-04-04 20:48:04 UTC</createdTime>
+<generatorID>D905D5B2-D9D2-A89A-B1B7-72DA9AD40A64</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <engineerTo>
 <item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
 </engineerTo>
+<referedAttribute>39164A28-520B-B349-A3B9-3BAFC0C4A2B0</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>100</dataTypeSize>
-<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="C34D4AE6-F622-B9AA-CC77-6FF7F782C2B6" name="User PK">
+<identifier id="F605FE13-D09F-86A9-ADF0-062F0D9C9BB6" name="Address PK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-18 19:32:53 UTC</createdTime>
+<createdTime>2024-04-04 20:47:45 UTC</createdTime>
 <ownerDesignName>diagram</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="false"/>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
 </engineerTo>
 <pk>true</pk>
-<newElementsIDs>39164A28-520B-B349-A3B9-3BAFC0C4A2B0</newElementsIDs>
 <usedAttributes>
-<attributeRef>39164A28-520B-B349-A3B9-3BAFC0C4A2B0</attributeRef>
+<attributeRef>76A5FB81-65CE-CFD9-2179-6267ED661DD0</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>

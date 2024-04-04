@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F3F4BE41-4ABA-8575-1681-078EA3555905" name="Address">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>D4CBBFE6-4689-E4F4-2A1F-D188BC89905E</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="addressID" id="9F88FEB8-5773-3A3A-1E77-F9DAB3907F95">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>76A5FB81-65CE-CFD9-2179-6267ED661DD0</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="addressName" id="6C8A5873-6F74-64C5-E96B-47C3C9A5C11F">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>83BE98E9-524D-4443-E0FF-5D4A0518F0F0</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Person_dni" id="238A8715-A9FD-CC43-4803-0C4B31055BBF">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>958B0444-7C05-1C4F-80E8-1720888CC778</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85671F6B-C542-B79B-C952-C67B5A3FB52E" referredColumn="1165D6C5-3A1B-9EA8-708E-C7F346A17360"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EBB17155-092E-9579-8C51-6BAF881124C7" name="Address_PK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>F605FE13-D09F-86A9-ADF0-062F0D9C9BB6</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F88FEB8-5773-3A3A-1E77-F9DAB3907F95"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC98B92A-F28E-AA37-2D4F-6A03E51AFF5D" name="Address_Person_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>D905D5B2-D9D2-A89A-B1B7-72DA9AD40A64</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="238A8715-A9FD-CC43-4803-0C4B31055BBF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EB26ED16-C2B3-E3B6-8749-9001D3BFE411" name="Ticket">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1D6CB30-1779-0134-00ED-9DEA3188B544" name="Ticket">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>34D277FF-A513-DD91-0FE1-0CF0E9D038A2</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="ticketNro" id="34D75AEE-D891-AB67-2C73-098BCDA113C0">
+<Column name="ticketNro" id="138DB484-EE4B-C5D1-4D6E-5D5CBF152E05">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>32F504EB-7003-D279-B8EF-DF47D8CF88BA</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -19,9 +19,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="dateTicket" id="CF0231C9-39F4-4540-C4CA-F679F11DF271">
+<Column name="dateTicket" id="A7E07D93-5363-5768-5607-C61AA4335039">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>0EAE4376-68F6-8B01-1300-00A34EC14DB7</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -30,9 +30,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="timeTicket" id="62EDA664-5382-7197-198B-7A872B6C07D9">
+<Column name="timeTicket" id="25373A4B-A667-F7F5-790A-A58B05E21077">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>D3AF592E-3EA7-BE4E-231D-A03B8BC3B1C1</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -41,9 +41,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Place_origin" id="73CEB727-6526-0DD4-E0DB-7F89625C8B71">
+<Column name="Place_origin" id="8DFB1319-C4B7-9270-24E1-8A07A17D80E2">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>4BC9FF2A-89B6-F943-0D4D-0EE215CA6F8B</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -53,12 +53,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="A26DC3E7-22F6-13AB-5FEE-2816E1A52D6D" referredColumn="2B911096-9E0A-6188-178E-2A484128FFB9"/>
+<colAssociation fkAssociation="683F27B3-4AD7-ED95-75D1-BEEB211AE51D" referredColumn="79A51A77-10F1-9A0C-E141-A24575E4B2AF"/>
 </associations>
 </Column>
-<Column name="Place_destination" id="93B041C8-ECB8-D217-F21C-8182CD0B735B">
+<Column name="Place_destination" id="0BC8E6D6-42BE-B1A4-4357-165CDF62C555">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>9872951A-68DC-C6FF-73CA-BFCEA7947716</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -68,12 +68,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="2B2F427D-5661-0737-1AE8-9D28AC9E6FC2" referredColumn="2B911096-9E0A-6188-178E-2A484128FFB9"/>
+<colAssociation fkAssociation="2D0F528B-4487-ADA6-5BCB-13292C204DC1" referredColumn="79A51A77-10F1-9A0C-E141-A24575E4B2AF"/>
 </associations>
 </Column>
-<Column name="Person_dni" id="1E769122-0CF5-D995-D366-7A7C09E061BC">
+<Column name="Person_dni" id="851D3E8D-68D4-269B-21F4-7C40DCE886F9">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>0F7CEFDB-5141-BFC3-6979-C0E74474911C</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -83,12 +83,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="CA8E5263-8000-3767-2DA7-000B05602481" referredColumn="423A4AE8-AF31-D164-E8AA-442791999F63"/>
+<colAssociation fkAssociation="65FBCEA6-8BF3-5C5B-AD27-226BF700A690" referredColumn="1165D6C5-3A1B-9EA8-708E-C7F346A17360"/>
 </associations>
 </Column>
-<Column name="Company_companyNro" id="AAFB588F-4500-888D-FD8A-E7DBECF2A336">
+<Column name="Company_companyNro" id="BAB54F66-8D62-7704-6FCD-1378B4C00C7C">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>00A469C8-76DC-C6E2-5B0C-0B7766F1DE4B</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -98,65 +98,65 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="C0560815-6143-ACB2-BC97-0C3A807ECB5A" referredColumn="CBF63E41-DD6F-15DD-B1EE-A58849C417FE"/>
+<colAssociation fkAssociation="221EB3DD-8713-E8AC-901F-BAFEEB2B32E8" referredColumn="1477B272-643C-40CA-3BDD-704BD8AEBEE4"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="87A85732-2982-AF9F-A7AC-DFF51818617F" name="Ticket_PK">
+<ind_PK_UK id="3CFE9422-C457-1569-F3C8-BA8ED92F0672" name="Ticket_PK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>E53969B8-9ECF-B0B9-FAE2-ADB1936FF8D3</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="34D75AEE-D891-AB67-2C73-098BCDA113C0"/>
+<colUsage columnID="138DB484-EE4B-C5D1-4D6E-5D5CBF152E05"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F7723DAA-3CD1-1CD9-D0D3-03D75EB63F35" name="Ticket_Company_FK">
+<ind_PK_UK id="C4444383-84C2-7038-ED12-AC74D2F03E98" name="Ticket_Company_FK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>9D95EC8A-832F-C5AB-04B0-4CE37BEA8FAE</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="AAFB588F-4500-888D-FD8A-E7DBECF2A336"/>
+<colUsage columnID="BAB54F66-8D62-7704-6FCD-1378B4C00C7C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="9B5A59E9-7762-73AB-27F2-DA3CF0DBA64C" name="Ticket_Place_FK">
+<ind_PK_UK id="F956B195-6271-DA8D-E823-13689BB5B89D" name="Ticket_Place_FK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>F188DB4A-4F8A-F5FF-BF33-9D4BE85DFE2E</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="93B041C8-ECB8-D217-F21C-8182CD0B735B"/>
+<colUsage columnID="0BC8E6D6-42BE-B1A4-4357-165CDF62C555"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2EB8A621-EA71-3F6D-4B1D-588EDFC00D9D" name="Ticket_Place_FKv2">
+<ind_PK_UK id="8B206EA9-DD89-BE00-1DE1-B7B72801F245" name="Ticket_Place_FKv2">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>4CD45DE2-41C0-B9F3-DA92-193D67869D1D</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="73CEB727-6526-0DD4-E0DB-7F89625C8B71"/>
+<colUsage columnID="8DFB1319-C4B7-9270-24E1-8A07A17D80E2"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="7EF6CB5E-5066-5DA1-25F3-F81600553999" name="Ticket_Person_FK">
+<ind_PK_UK id="1EA82C34-DA5C-B7DC-11D2-E33C6B83D646" name="Ticket_Person_FK">
 <createdBy>tineo</createdBy>
-<createdTime>2024-03-31 18:16:05 UTC</createdTime>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
 <generatorID>1A5D470F-BC07-96C6-7809-7B8D40DB4869</generatorID>
 <ownerDesignName>diagram</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1E769122-0CF5-D995-D366-7A7C09E061BC"/>
+<colUsage columnID="851D3E8D-68D4-269B-21F4-7C40DCE886F9"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

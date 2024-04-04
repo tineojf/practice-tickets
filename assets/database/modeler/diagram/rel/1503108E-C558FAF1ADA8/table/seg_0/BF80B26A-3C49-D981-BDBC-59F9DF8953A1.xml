@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF80B26A-3C49-D981-BDBC-59F9DF8953A1" name="Phone">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>71CDC7E4-67BC-EDE0-0761-3F4DC8836B1D</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="phoneID" id="F33E2071-7620-6CE9-063E-825B43F61F07">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>B91757BC-4ABB-7094-C106-69DA36C0E049</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phoneNumber" id="8BD38D99-D5CB-1F10-6C15-F7B56AE62E41">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>6B9E3C04-B03C-B6C8-7AF1-B4DAC363B080</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Person_dni" id="0C6E1611-4DDB-F266-4A9B-E681D10A3F5B">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>41857CBC-DD5E-9998-8EFE-D884BB5DB8B4</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6677291F-79ED-AA67-F180-C3BF096543EF" referredColumn="1165D6C5-3A1B-9EA8-708E-C7F346A17360"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EEC87CDC-7B29-AA73-BCCD-E74AD1C6DCBD" name="Phone_PK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>7D6C0144-BF67-832C-01DA-250436483AC1</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F33E2071-7620-6CE9-063E-825B43F61F07"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="17CC2BA3-0507-852C-DF64-574E7D006687" name="Phone_Person_FK">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:53:19 UTC</createdTime>
+<generatorID>D35F4304-81DF-543F-91B9-8878BE92F4E7</generatorID>
+<ownerDesignName>diagram</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0C6E1611-4DDB-F266-4A9B-E681D10A3F5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="person_phone" directorySegmentName="seg_0" id="D35F4304-81DF-543F-91B9-8878BE92F4E7">
+<createdBy>tineo</createdBy>
+<createdTime>2024-04-04 20:47:02 UTC</createdTime>
+<ownerDesignName>diagram</ownerDesignName>
+<engineerTo>
+<item key="1503108E-ECAE-F70D-A6C3-C558FAF1ADA8" value="true"/>
+</engineerTo>
+<sourcePk>C34D4AE6-F622-B9AA-CC77-6FF7F782C2B6</sourcePk>
+<targetPk>7D6C0144-BF67-832C-01DA-250436483AC1</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DB290955-C660-33AB-5BFF-A52D62BAA4F1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>71CDC7E4-67BC-EDE0-0761-3F4DC8836B1D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>
